@@ -1,0 +1,2483 @@
+################################################################################
+#                                                                              #
+#      IAR Universal Linker V6.5.4.100                                         #
+#                                                                              #
+#           Link time     =  28/Jul/2020  15:19:46                             #
+#           Target CPU    =  x51                                               #
+#           List file     =  C:\Users\marti\Thesis\zboss_firmware_src_\hw\rele #
+#                            ase\CC2531\List\zboss_sniffer.map                 #
+#           Output file 1 =  C:\Users\marti\Thesis\zboss_firmware_src_\hw\rele #
+#                            ase\CC2531\Exe\zboss_sniffer.hex                  #
+#                            Format: ubrof10                                   #
+#                            UBROF version 10.0.6                              #
+#                            Using library modules for C-SPY (-rt)             #
+#           Command line  =  -f C:\Users\marti\AppData\Local\Temp\EW23F1.tmp   #
+#                            (C:\Users\marti\Thesis\zboss_firmware_src_\hw\rel #
+#                            ease\CC2531\Obj\hal_enter_pm.r51                  #
+#                            C:\Users\marti\Thesis\zboss_firmware_src_\hw\rele #
+#                            ase\CC2531\Obj\usb_cdc_descriptor.r51             #
+#                            C:\Users\marti\Thesis\zboss_firmware_src_\hw\rele #
+#                            ase\CC2531\Obj\usb_cdc_hooks.r51                  #
+#                            C:\Users\marti\Thesis\zboss_firmware_src_\hw\rele #
+#                            ase\CC2531\Obj\usb_descriptor_parser.r51          #
+#                            C:\Users\marti\Thesis\zboss_firmware_src_\hw\rele #
+#                            ase\CC2531\Obj\usb_firmware_library_config.r51    #
+#                            C:\Users\marti\Thesis\zboss_firmware_src_\hw\rele #
+#                            ase\CC2531\Obj\usb_framework.r51                  #
+#                            C:\Users\marti\Thesis\zboss_firmware_src_\hw\rele #
+#                            ase\CC2531\Obj\usb_interrupt.r51                  #
+#                            C:\Users\marti\Thesis\zboss_firmware_src_\hw\rele #
+#                            ase\CC2531\Obj\usb_standard_requests.r51          #
+#                            C:\Users\marti\Thesis\zboss_firmware_src_\hw\rele #
+#                            ase\CC2531\Obj\usb_suspend.r51                    #
+#                            C:\Users\marti\Thesis\zboss_firmware_src_\hw\rele #
+#                            ase\CC2531\Obj\usb_uart.r51                       #
+#                            C:\Users\marti\Thesis\zboss_firmware_src_\hw\rele #
+#                            ase\CC2531\Obj\zb_sniffer.r51                     #
+#                            C:\Users\marti\Thesis\zboss_firmware_src_\hw\rele #
+#                            ase\CC2531\Obj\zb_sniffer_leds.r51                #
+#                            C:\Users\marti\Thesis\zboss_firmware_src_\hw\rele #
+#                            ase\CC2531\Obj\zb_sniffer_radio.r51               #
+#                            C:\Users\marti\Thesis\zboss_firmware_src_\hw\rele #
+#                            ase\CC2531\Obj\zb_sniffer_time.r51                #
+#                            C:\Users\marti\Thesis\zboss_firmware_src_\hw\rele #
+#                            ase\CC2531\Obj\zb_sniffer_transport.r51           #
+#                            C:\Users\marti\Thesis\zboss_firmware_src_\hw\rele #
+#                            ase\CC2531\Obj\zb_sniffer_usb.r51                 #
+#                            -o                                                #
+#                            C:\Users\marti\Thesis\zboss_firmware_src_\hw\rele #
+#                            ase\CC2531\Exe\zboss_sniffer.hex                  #
+#                            -l                                                #
+#                            C:\Users\marti\Thesis\zboss_firmware_src_\hw\rele #
+#                            ase\CC2531\List\zboss_sniffer.map                 #
+#                            -xms                                              #
+#                            "-IC:\Program Files (x86)\IAR Systems\Embedded Wo #
+#                            rkbench 8.1\8051\LIB\"                            #
+#                            -f                                                #
+#                            "C:\Program Files (x86)\IAR Systems\Embedded Work #
+#                            bench 8.1\8051\config\devices\Texas Instruments\l #
+#                            nk51ew_cc2531F256.xcl"                            #
+#                            (-D_IDATA0_START=0x00 -D_IDATA0_END=0xFF          #
+#                            -D_PDATA0_START=0x1E00 -D_PDATA0_END=0x1EFF       #
+#                            -D_IXDATA0_START=0x0001 -D_IXDATA0_END=0x1EFF     #
+#                            -D_XDATA0_START=_IXDATA0_START                    #
+#                            -D_XDATA0_END=_IXDATA0_END                        #
+#                            -D_CODE0_START=0x0000 -D_CODE0_END=0xFFFF         #
+#                            -D?REGISTER_BANK=0x0 -D_REGISTER_BANK_START=0x0   #
+#                            -D_BREG_START=0x00 -D?VB=0x20                     #
+#                            -Z(BIT)BREG=_BREG_START -Z(BIT)BIT_N=0-7F         #
+#                            -Z(DATA)REGISTERS+8=_REGISTER_BANK_START          #
+#                            -Z(DATA)BDATA_Z,BDATA_N,BDATA_I=20-2F             #
+#                            -Z(DATA)VREG=08-7F -Z(DATA)PSP,XSP=08-7F          #
+#                            -Z(DATA)DOVERLAY=08-7F                            #
+#                            -Z(DATA)DATA_I,DATA_Z,DATA_N=08-7F                #
+#                            -U(IDATA)0-7F=(DATA)0-7F                          #
+#                            -Z(IDATA)IDATA_I,IDATA_Z,IDATA_N=08-_IDATA0_END   #
+#                            -Z(IDATA)ISTACK+_IDATA_STACK_SIZE#08-_IDATA0_END  #
+#                            -Z(IDATA)IOVERLAY=08-FF -Z(CODE)INTVEC=0          #
+#                            -Z(CODE)CSTART=_CODE0_START-_CODE0_END            #
+#                            -Z(CODE)BIT_ID,BDATA_ID,DATA_ID,IDATA_ID,IXDATA_I #
+#                            D,PDATA_ID,XDATA_ID=_CODE0_START-_CODE0_END       #
+#                            -Z(CODE)RCODE,DIFUNCT,CODE_C,CODE_N,NEAR_CODE=_CO #
+#                            DE0_START-_CODE0_END                              #
+#                            -Z(CODE)CHECKSUM#_CODE0_END                       #
+#                            -Z(XDATA)PDATA_Z,PDATA_I=_PDATA0_START-_PDATA0_EN #
+#                            D                                                 #
+#                            -P(XDATA)PDATA_N=_PDATA0_START-_PDATA0_END        #
+#                            -Z(XDATA)PSTACK+_PDATA_STACK_SIZE=_PDATA0_START-_ #
+#                            PDATA0_END                                        #
+#                            -Z(XDATA)EXT_STACK+_EXTENDED_STACK_SIZE=_EXTENDED #
+#                            _STACK_START                                      #
+#                            -Z(XDATA)XSTACK+_XDATA_STACK_SIZE=_XDATA0_START-_ #
+#                            XDATA0_END                                        #
+#                            -Z(XDATA)IXDATA_Z,IXDATA_I=_IXDATA0_START-_IXDATA #
+#                            0_END                                             #
+#                            -P(XDATA)IXDATA_N=_IXDATA0_START-_IXDATA0_END     #
+#                            -Z(XDATA)XDATA_Z,XDATA_I=_XDATA0_START-_XDATA0_EN #
+#                            D                                                 #
+#                            -P(XDATA)XDATA_N=_XDATA0_START-_XDATA0_END        #
+#                            -Z(XDATA)XDATA_HEAP+_XDATA_HEAP_SIZE=_XDATA0_STAR #
+#                            T-_XDATA0_END                                     #
+#                            -Z(CONST)XDATA_ROM_C=_XDATA0_START-_XDATA0_END    #
+#                            -cx51) -D?DPMASK=0x01                             #
+#                            -D_NR_OF_VIRTUAL_REGISTERS=8 -D?DPS=0x92          #
+#                            -D?PBANK=0x93 -D?DPL1=0x84 -D?DPH1=0x85           #
+#                            -D?CBANK=0x9F -D?CBANK_MASK=0xFF                  #
+#                            -e?BCALL_FF=?BCALL -e?BRET_FF=?BRET               #
+#                            -e?BDISPATCH_FF=?BDISPATCH                        #
+#                            -D_CODEBANK_START=0x8000 -D_CODEBANK_END=0xFFFF   #
+#                            -D_NR_OF_BANKS=0x07                               #
+#                            "-IC:\Program Files (x86)\IAR Systems\Embedded Wo #
+#                            rkbench 8.1\8051\CONFIG\"                         #
+#                            -e_large_write=_formatted_write                   #
+#                            -e_large_read=_formatted_read -rt -s              #
+#                            __program_start                                   #
+#                            "C:\Program Files (x86)\IAR Systems\Embedded Work #
+#                            bench 8.1\8051\LIB\CLIB\cl-pli-nlxd-2e16inc.r51"  #
+#                            -D_IDATA_STACK_SIZE=0x40 -D?ESP=0 -D?ESP_MASK=0   #
+#                            -D_EXTENDED_STACK_START=0                         #
+#                            -D_EXTENDED_STACK_SIZE=0                          #
+#                            -D_PDATA_STACK_SIZE=0x80                          #
+#                            -D_XDATA_STACK_SIZE=0xEFF                         #
+#                            -D_XDATA_HEAP_SIZE=0xFF -D_FAR_HEAP_SIZE=0xFFF    #
+#                            -D_HUGE_HEAP_SIZE=0xFFF                           #
+#                            -D_FAR22_HEAP_SIZE=0xFFF)                         #
+#                                                                              #
+#                           Copyright (C) 1987-2018 IAR Systems AB.            #
+################################################################################
+
+
+
+
+
+                ****************************************
+                *                                      *
+                *           CROSS REFERENCE            *
+                *                                      *
+                ****************************************
+
+       Program entry at : CODE      000000D5  Relocatable, from module : CSTARTUP
+
+
+
+
+                ****************************************
+                *                                      *
+                *            RUNTIME MODEL             *
+                *                                      *
+                ****************************************
+
+  __SystemLibrary          = CLib
+  __calling_convention     = xdata_reentrant
+  __code_model             = near
+  __core                   = plain
+  __data_model             = large
+  __dptr_size              = 16
+  __dptr_visibility        = separate
+  __extended_stack         = disabled
+  __location_for_constants = data
+  __number_of_dptrs        = 2
+  __register_banks         = *
+  __rt_version             = 1
+
+                ****************************************
+                *                                      *
+                *    AUTOMATIC SYMBOL REDIRECTIONS     *
+                *                                      *
+                ****************************************
+
+                  There are no automatic symbol redirections.
+
+
+
+                ****************************************
+                *                                      *
+                *              MODULE MAP              *
+                *                                      *
+                ****************************************
+
+
+  DEFINED ABSOLUTE ENTRIES
+    *************************************************************************
+
+  DEFINED ABSOLUTE ENTRIES
+  PROGRAM MODULE, NAME : ?ABS_ENTRY_MOD
+
+Absolute parts
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           _FAR22_HEAP_SIZE        00000FFF 
+           _HUGE_HEAP_SIZE         00000FFF 
+           _FAR_HEAP_SIZE          00000FFF 
+           _XDATA_HEAP_SIZE        000000FF 
+           _XDATA_STACK_SIZE       00000EFF 
+           _PDATA_STACK_SIZE       00000080 
+           _EXTENDED_STACK_SIZE    00000000 
+           _EXTENDED_STACK_START   00000000 
+           ?ESP_MASK               00000000 
+           ?ESP                    00000000 
+           _IDATA_STACK_SIZE       00000040 
+           _NR_OF_BANKS            00000007 
+           _CODEBANK_END           0000FFFF 
+           _CODEBANK_START         00008000 
+           ?CBANK_MASK             000000FF 
+           ?CBANK                  0000009F 
+           ?DPH1                   00000085        ?XSTACK_RESTORE_DPTRS_1 (?XSTACK_RESTORE_DPTR)
+                                                   ?XSTACK_SAVE_DPTRS_1 (?XSTACK_SAVE_DPTR)
+                                                   ConfigureEndpoints (usb_standard_requests)
+                                                   Segment part 1 (?XSTACK_DISP8)
+                                                   memcpy (?memcpy)
+                                                   populate_transport_rb_from_buffer (usb_uart)
+                                                   usbInProcess (usb_uart)
+                                                   usbdpFindNext (usb_descriptor_parser)
+                                                   usbfwReadFifo (usb_framework)
+                                                   usbfwWriteFifo (usb_framework)
+                                                   usbsrGetDescriptor (usb_standard_requests)
+                                                   usbsrSetConfiguration (usb_standard_requests)
+                                                   usbsrSetInterface (usb_standard_requests)
+                                                   zb_rf_start_tx (zb_sniffer_radio)
+                                                   zb_sniffer_get_next_block_for_host (zb_sniffer_transport)
+                                                   zb_sniffer_rf_interrupt_handler (zb_sniffer_radio)
+           ?DPL1                   00000084        ?XSTACK_RESTORE_DPTRS_1 (?XSTACK_RESTORE_DPTR)
+                                                   ?XSTACK_SAVE_DPTRS_1 (?XSTACK_SAVE_DPTR)
+                                                   ConfigureEndpoints (usb_standard_requests)
+                                                   Segment part 1 (?XSTACK_DISP8)
+                                                   memcpy (?memcpy)
+                                                   populate_transport_rb_from_buffer (usb_uart)
+                                                   usbInProcess (usb_uart)
+                                                   usbdpFindNext (usb_descriptor_parser)
+                                                   usbfwReadFifo (usb_framework)
+                                                   usbfwWriteFifo (usb_framework)
+                                                   usbsrGetDescriptor (usb_standard_requests)
+                                                   usbsrSetConfiguration (usb_standard_requests)
+                                                   usbsrSetInterface (usb_standard_requests)
+                                                   zb_rf_start_tx (zb_sniffer_radio)
+                                                   zb_sniffer_get_next_block_for_host (zb_sniffer_transport)
+                                                   zb_sniffer_rf_interrupt_handler (zb_sniffer_radio)
+           ?PBANK                  00000093 
+           ?DPS                    00000092        ?C_GPTR_LOAD (?C_GPTR_LOAD)
+                                                   ?C_GPTR_STORE (?C_GPTR_STORE)
+                                                   ?FUNC_ENTER_XDATA (?FUNC_ENTER_XDATA)
+                                                   ?FUNC_LEAVE_XDATA (?FUNC_LEAVE_XDATA)
+                                                   ?INTERRUPT_ENTER_XSP (?INTERRUPT_ENTER_XSP)
+                                                   ?INTERRUPT_LEAVE_XSP (?INTERRUPT_LEAVE_XSP)
+                                                   ?MOVE_LONG8_XDATA_XDATA_2DPTR (?MOVE_LONG8_XDATA_XDATA_2DPTR)
+                                                   ?RESET_DPS (CSTARTUP)
+                                                   ConfigureEndpoints (usb_standard_requests)
+                                                   execute_cmd (zb_sniffer)
+                                                   memcpy (?memcpy)
+                                                   populate_transport_rb_from_buffer (usb_uart)
+                                                   usbEventProcess (usb_uart)
+                                                   usbInProcess (usb_uart)
+                                                   usbUartProcess (usb_uart)
+                                                   usbcrHookProcessIn (usb_cdc_hooks)
+                                                   usbcrHookProcessOut (usb_cdc_hooks)
+                                                   usbdpFindNext (usb_descriptor_parser)
+                                                   usbdpGetDeviceDesc (usb_descriptor_parser)
+                                                   usbdpInit (usb_descriptor_parser)
+                                                   usbfwReadFifo (usb_framework)
+                                                   usbfwResetHandler (usb_framework)
+                                                   usbfwSetAllEpStatus (usb_framework)
+                                                   usbfwSetupHandler (usb_framework)
+                                                   usbfwWriteFifo (usb_framework)
+                                                   usbirqHookProcessEvents (usb_cdc_hooks)
+                                                   usbsrClearFeature (usb_standard_requests)
+                                                   usbsrGetConfiguration (usb_standard_requests)
+                                                   usbsrGetDescriptor (usb_standard_requests)
+                                                   usbsrGetStatus (usb_standard_requests)
+                                                   usbsrHookClearFeature (usb_cdc_hooks)
+                                                   usbsrHookProcessEvent (usb_cdc_hooks)
+                                                   usbsrHookSetFeature (usb_cdc_hooks)
+                                                   usbsrSetAddress (usb_standard_requests)
+                                                   usbsrSetConfiguration (usb_standard_requests)
+                                                   usbsrSetFeature (usb_standard_requests)
+                                                   usbsrSetInterface (usb_standard_requests)
+                                                   usbsuspEnter (usb_suspend)
+                                                   usbvrHookProcessIn (usb_cdc_hooks)
+                                                   usbvrHookProcessOut (usb_cdc_hooks)
+                                                   zb_rf_start_tx (zb_sniffer_radio)
+                                                   zb_set_channel (zb_sniffer_radio)
+                                                   zb_sniffer_clock_set_src (zb_sniffer_time)
+                                                   zb_sniffer_get_next_block_for_host (zb_sniffer_transport)
+                                                   zb_sniffer_init (zb_sniffer)
+                                                   zb_sniffer_init_clock (zb_sniffer_time)
+                                                   zb_sniffer_iteration (zb_sniffer)
+                                                   zb_sniffer_leds_init (zb_sniffer_leds)
+                                                   zb_sniffer_leds_iteration (zb_sniffer_leds)
+                                                   zb_sniffer_process_incoming_cmds (zb_sniffer)
+                                                   zb_sniffer_rf_init_radio (zb_sniffer_radio)
+                                                   zb_sniffer_rf_interrupt_handler (zb_sniffer_radio)
+                                                   zb_sniffer_rf_start_rx (zb_sniffer_radio)
+                                                   zb_sniffer_rf_stop_rx (zb_sniffer_radio)
+                                                   zb_sniffer_rferr_interrupt_handler (zb_sniffer_radio)
+                                                   zb_sniffer_send_iteration (zb_sniffer_radio)
+                                                   zb_sniffer_start (zb_sniffer)
+                                                   zb_sniffer_start_timer (zb_sniffer_time)
+                                                   zb_sniffer_stop (zb_sniffer)
+                                                   zb_sniffer_stop_timer (zb_sniffer_time)
+                                                   zb_sniffer_timer_init (zb_sniffer_time)
+                                                   zb_sniffer_transport_clear (zb_sniffer_transport)
+                                                   zb_sniffer_transport_init (zb_sniffer_transport)
+                                                   zb_sniffer_usb_init (zb_sniffer_usb)
+           _NR_OF_VIRTUAL_REGISTERS
+                                   00000008 
+           ?DPMASK                 00000001        ?C_GPTR_LOAD (?C_GPTR_LOAD)
+                                                   ?C_GPTR_STORE (?C_GPTR_STORE)
+                                                   ?FUNC_ENTER_XDATA (?FUNC_ENTER_XDATA)
+                                                   ?FUNC_LEAVE_XDATA (?FUNC_LEAVE_XDATA)
+                                                   ?INTERRUPT_ENTER_XSP (?INTERRUPT_ENTER_XSP)
+                                                   ?INTERRUPT_LEAVE_XSP (?INTERRUPT_LEAVE_XSP)
+                                                   ?RESET_DPS (CSTARTUP)
+           ?VB                     00000020        ?FUNC_ENTER_XDATA (?FUNC_ENTER_XDATA)
+                                                   ?FUNC_LEAVE_XDATA (?FUNC_LEAVE_XDATA)
+                                                   ?INTERRUPT_ENTER_XSP (?INTERRUPT_ENTER_XSP)
+                                                   ?INTERRUPT_LEAVE_XSP (?INTERRUPT_LEAVE_XSP)
+           _BREG_START             00000000 
+           _REGISTER_BANK_START    00000000 
+           ?REGISTER_BANK          00000000        Segment part 6 (CSTARTUP)
+           _CODE0_END              0000FFFF 
+           _CODE0_START            00000000 
+           _XDATA0_END             00001EFF 
+           _XDATA0_START           00000001 
+           _IXDATA0_END            00001EFF 
+           _IXDATA0_START          00000001 
+           _PDATA0_END             00001EFF 
+           _PDATA0_START           00001E00 
+           _IDATA0_END             000000FF 
+           _IDATA0_START           00000000 
+    *************************************************************************
+
+  FILE NAME : C:\Users\marti\Thesis\zboss_firmware_src_\hw\release\CC2531\Obj\hal_enter_pm.r51
+  PROGRAM MODULE, NAME : hal_enter_pm
+
+  SEGMENTS IN THE MODULE
+  ======================
+NEAR_CODE
+  Relative segment, address: CODE 000004D8 - 000004DC (0x5 bytes), align: 2
+  Segment part 0.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           halEnterPowerMode       000004D8        usbsuspEnter (usb_suspend)
+
+    *************************************************************************
+
+  FILE NAME : C:\Users\marti\Thesis\zboss_firmware_src_\hw\release\CC2531\Obj\usb_cdc_descriptor.r51
+  LIBRARY MODULE, NAME : usb_descriptor
+
+  SEGMENTS IN THE MODULE
+  ======================
+RCODE
+  Relative segment, address: CODE 000000FD - 000001A7 (0xab bytes), align: 0
+  Segment part 0. ROOT 
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           usbDescStart            000000FD        Segment part 7 (usb_firmware_library_config)
+           usbDescEnd              000001A0        Segment part 7 (usb_firmware_library_config)
+           usbDescLut              000001A0        Segment part 7 (usb_firmware_library_config)
+           usbDescLutEnd           000001A0        Segment part 7 (usb_firmware_library_config)
+           usbDblbufLut            000001A0        Segment part 7 (usb_firmware_library_config)
+           usbDblbufLutEnd         000001A8        Segment part 7 (usb_firmware_library_config)
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           deviceDesc              000000FD 
+           deviceDescEnd           0000010F 
+           config1LengthStart      0000010F 
+           configDesc              0000010F 
+           configDescEnd           00000118 
+           config1LengthEnd        00000152 
+           interface0Desc          00000118 
+           interface0DescEnd       00000121 
+           headerFunctionalDesc    00000121 
+           headerFunctionalDescEnd
+                                   00000126 
+           absCtrlManFuncDesc      00000126 
+           absCtrlManFuncDescEnd   0000012A 
+           unionFunctionalDesc     0000012A 
+           unionFunctionalDescEnd
+                                   0000012F 
+           callMngFuncDesc         0000012F 
+           callMngFuncDescEnd      00000134 
+           endpoint0Desc           00000134 
+           endpoint0DescEnd        0000013B 
+           interface1Desc          0000013B 
+           interface1DescEnd       00000144 
+           endpoint1Desc           00000144 
+           endpoint1DescEnd        0000014B 
+           endpoint2Desc           0000014B 
+           endpoint2DescEnd        00000152 
+           string0Desc             00000152 
+           string0DescEnd          00000156 
+           string1Desc             00000156 
+           string1DescEnd          0000017A 
+           string2Desc             0000017A 
+           string2DescEnd          00000198 
+           string3Desc             00000198 
+           string3DescEnd          000001A0 
+
+    *************************************************************************
+
+  FILE NAME : C:\Users\marti\Thesis\zboss_firmware_src_\hw\release\CC2531\Obj\usb_cdc_hooks.r51
+  PROGRAM MODULE, NAME : usb_cdc_hooks
+
+  SEGMENTS IN THE MODULE
+  ======================
+NEAR_CODE
+  Relative segment, address: CODE 000004DD - 0000052B (0x4f bytes), align: 0
+  Segment part 6.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           usbcrHookProcessOut     000004DD        usbfwSetupHandler (usb_framework)
+               is indirectly called
+               ISTACK = 00000000 ( 00000002 )
+    -------------------------------------------------------------------------
+NEAR_CODE
+  Relative segment, address: CODE 0000052C - 0000056E (0x43 bytes), align: 0
+  Segment part 7.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           usbcrHookProcessIn      0000052C        usbfwSetupHandler (usb_framework)
+               is indirectly called
+               ISTACK = 00000000 ( 00000002 )
+    -------------------------------------------------------------------------
+NEAR_CODE
+  Relative segment, address: CODE 0000056F - 00000583 (0x15 bytes), align: 0
+  Segment part 8.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           usbvrHookProcessOut     0000056F        usbfwSetupHandler (usb_framework)
+               is indirectly called
+               ISTACK = 00000000 ( 00000002 )
+    -------------------------------------------------------------------------
+NEAR_CODE
+  Relative segment, address: CODE 00000584 - 00000598 (0x15 bytes), align: 0
+  Segment part 9.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           usbvrHookProcessIn      00000584        usbfwSetupHandler (usb_framework)
+               is indirectly called
+               ISTACK = 00000000 ( 00000002 )
+    -------------------------------------------------------------------------
+NEAR_CODE
+  Relative segment, address: CODE 00000599 - 000005AD (0x15 bytes), align: 0
+  Segment part 12.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           usbsrHookClearFeature   00000599        usbsrClearFeature (usb_standard_requests)
+               ISTACK = 00000000 ( 00000002 )
+    -------------------------------------------------------------------------
+NEAR_CODE
+  Relative segment, address: CODE 000005AE - 000005C2 (0x15 bytes), align: 0
+  Segment part 13.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           usbsrHookSetFeature     000005AE        usbsrSetFeature (usb_standard_requests)
+               ISTACK = 00000000 ( 00000002 )
+    -------------------------------------------------------------------------
+NEAR_CODE
+  Relative segment, address: CODE 000005C3 - 000005E3 (0x21 bytes), align: 0
+  Segment part 15.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           usbsrHookProcessEvent   000005C3        ChangeFeature (usb_standard_requests)
+                                                   usbsrSetConfiguration (usb_standard_requests)
+                                                   usbsrSetInterface (usb_standard_requests)
+    -------------------------------------------------------------------------
+NEAR_CODE
+  Relative segment, address: CODE 000005E4 - 000005E7 (0x4 bytes), align: 0
+  Segment part 16.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           usbirqHookProcessEvents
+                                   000005E4        usbirqHandler (usb_interrupt)
+
+    *************************************************************************
+
+  FILE NAME : C:\Users\marti\Thesis\zboss_firmware_src_\hw\release\CC2531\Obj\usb_descriptor_parser.r51
+  PROGRAM MODULE, NAME : usb_descriptor_parser
+
+  SEGMENTS IN THE MODULE
+  ======================
+XDATA_Z
+  Relative segment, address: XDATA 00000F00 - 00000F01 (0x2 bytes), align: 0
+  Segment part 6.             Intra module refs:   usbdpFindNext
+                                                   usbdpInit
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           usbdpData               00000F00 
+    -------------------------------------------------------------------------
+NEAR_CODE
+  Relative segment, address: CODE 000005E8 - 00000606 (0x1f bytes), align: 0
+  Segment part 7.             Intra module refs:   usbdpGetConfigurationDesc
+                                                   usbdpGetDeviceDesc
+                                                   usbdpGetStringDesc
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           usbdpInit               000005E8 
+               XSTACK = 00000009 ( 00000000 )
+               ISTACK = 00000000 ( 00000002 )
+    -------------------------------------------------------------------------
+NEAR_CODE
+  Relative segment, address: CODE 00000607 - 000006C3 (0xbd bytes), align: 0
+  Segment part 8.             Intra module refs:   usbdpGetConfigurationDesc
+                                                   usbdpGetDeviceDesc
+                                                   usbdpGetInterfaceDesc
+                                                   usbdpGetStringDesc
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           usbdpFindNext           00000607        ConfigureEndpoints (usb_standard_requests)
+                                                   usbsrSetConfiguration (usb_standard_requests)
+               XSTACK = 0000000B ( 0000000A )
+    -------------------------------------------------------------------------
+NEAR_CODE
+  Relative segment, address: CODE 000006C4 - 000006D1 (0xe bytes), align: 0
+  Segment part 9.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           usbdpGetDeviceDesc      000006C4        usbsrGetDescriptor (usb_standard_requests)
+               calls direct
+    -------------------------------------------------------------------------
+NEAR_CODE
+  Relative segment, address: CODE 000006D2 - 00000711 (0x40 bytes), align: 0
+  Segment part 10.            Intra module refs:   usbdpGetInterfaceDesc
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           usbdpGetConfigurationDesc
+                                   000006D2        usbfwInit (usb_framework)
+                                                   usbsrGetDescriptor (usb_standard_requests)
+                                                   usbsrSetConfiguration (usb_standard_requests)
+               calls direct
+               XSTACK = 0000000B ( 00000009 )
+    -------------------------------------------------------------------------
+NEAR_CODE
+  Relative segment, address: CODE 00000712 - 00000753 (0x42 bytes), align: 0
+  Segment part 11.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           usbdpGetInterfaceDesc   00000712        usbsrSetInterface (usb_standard_requests)
+               calls direct
+               XSTACK = 00000000 ( 0000000B )
+    -------------------------------------------------------------------------
+NEAR_CODE
+  Relative segment, address: CODE 00000754 - 0000077A (0x27 bytes), align: 0
+  Segment part 12.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           usbdpGetStringDesc      00000754        usbsrGetDescriptor (usb_standard_requests)
+               calls direct
+               XSTACK = 00000000 ( 00000009 )
+
+    *************************************************************************
+
+  FILE NAME : C:\Users\marti\Thesis\zboss_firmware_src_\hw\release\CC2531\Obj\usb_firmware_library_config.r51
+  PROGRAM MODULE, NAME : usb_firmware_library_config
+
+  SEGMENTS IN THE MODULE
+  ======================
+XDATA_I
+  Relative segment, address: XDATA 00001BF0 - 00001BFB (0xc bytes), align: 0
+  Segment part 6.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           usbDescriptorMarker     00001BF0        ConfigureEndpoints (usb_standard_requests)
+                                                   usbdpFindNext (usb_descriptor_parser)
+                                                   usbdpInit (usb_descriptor_parser)
+                                                   usbsrGetDescriptor (usb_standard_requests)
+    -------------------------------------------------------------------------
+XDATA_ID
+  Relative segment, address: CODE 000000E7 - 000000F2 (0xc bytes), align: 0
+  Segment part 7.             Intra module refs:   usbDescriptorMarker
+
+    *************************************************************************
+
+  FILE NAME : C:\Users\marti\Thesis\zboss_firmware_src_\hw\release\CC2531\Obj\usb_framework.r51
+  PROGRAM MODULE, NAME : usb_framework
+
+  SEGMENTS IN THE MODULE
+  ======================
+XDATA_Z
+  Relative segment, address: XDATA 00000F02 - 00000F15 (0x14 bytes), align: 0
+  Segment part 6.             Intra module refs:   usbfwInit
+                                                   usbfwResetHandler
+                                                   usbfwSetAllEpStatus
+                                                   usbfwSetupHandler
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           usbfwData               00000F02        ChangeFeature (usb_standard_requests)
+                                                   ConfigureEndpoints (usb_standard_requests)
+                                                   usbcrHookProcessIn (usb_cdc_hooks)
+                                                   usbcrHookProcessOut (usb_cdc_hooks)
+                                                   usbsrGetConfiguration (usb_standard_requests)
+                                                   usbsrGetDescriptor (usb_standard_requests)
+                                                   usbsrGetInterface (usb_standard_requests)
+                                                   usbsrGetStatus (usb_standard_requests)
+                                                   usbsrHookClearFeature (usb_cdc_hooks)
+                                                   usbsrHookSetFeature (usb_cdc_hooks)
+                                                   usbsrSetAddress (usb_standard_requests)
+                                                   usbsrSetConfiguration (usb_standard_requests)
+                                                   usbsrSetInterface (usb_standard_requests)
+                                                   usbvrHookProcessIn (usb_cdc_hooks)
+                                                   usbvrHookProcessOut (usb_cdc_hooks)
+    -------------------------------------------------------------------------
+XDATA_Z
+  Relative segment, address: XDATA 00000F16 - 00000F1A (0x5 bytes), align: 0
+  Segment part 7.             Intra module refs:   usbfwSetupHandler
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           usbSetupData            00000F16        usbcrHookProcessIn (usb_cdc_hooks)
+                                                   usbcrHookProcessOut (usb_cdc_hooks)
+                                                   usbsrGetConfiguration (usb_standard_requests)
+                                                   usbsrGetDescriptor (usb_standard_requests)
+                                                   usbsrGetInterface (usb_standard_requests)
+                                                   usbsrGetStatus (usb_standard_requests)
+    -------------------------------------------------------------------------
+XDATA_Z
+  Relative segment, address: XDATA 00000F1B - 00000F22 (0x8 bytes), align: 0
+  Segment part 8.             Intra module refs:   usbfwSetupHandler
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           usbSetupHeader          00000F1B        ChangeFeature (usb_standard_requests)
+                                                   usbcrHookProcessIn (usb_cdc_hooks)
+                                                   usbcrHookProcessOut (usb_cdc_hooks)
+                                                   usbsrGetConfiguration (usb_standard_requests)
+                                                   usbsrGetDescriptor (usb_standard_requests)
+                                                   usbsrGetInterface (usb_standard_requests)
+                                                   usbsrGetStatus (usb_standard_requests)
+                                                   usbsrSetAddress (usb_standard_requests)
+                                                   usbsrSetConfiguration (usb_standard_requests)
+                                                   usbsrSetInterface (usb_standard_requests)
+    -------------------------------------------------------------------------
+DATA_Z
+  Relative segment, address: DATA 00000010 - 00000011 (0x2 bytes), align: 0
+  Segment part 9.             Intra module refs:   usbfwResetHandler
+                                                   usbfwSetupHandler
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           ProcessFunc             00000010 
+    -------------------------------------------------------------------------
+NEAR_CODE
+  Relative segment, address: CODE 0000077B - 000007CB (0x51 bytes), align: 0
+  Segment part 10.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           usbfwInit               0000077B        usbUartInit (usb_uart)
+               calls direct
+               XSTACK = 00000000 ( 00000009 )
+    -------------------------------------------------------------------------
+NEAR_CODE
+  Relative segment, address: CODE 000007CC - 000007F7 (0x2c bytes), align: 0
+  Segment part 11.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           usbfwResetHandler       000007CC        usbEventProcess (usb_uart)
+               calls direct
+               ISTACK = 00000000 ( 00000002 )
+    -------------------------------------------------------------------------
+NEAR_CODE
+  Relative segment, address: CODE 000007F8 - 00000AC6 (0x2cf bytes), align: 0
+  Segment part 12.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           usbfwSetupHandler       000007F8        usbEventProcess (usb_uart)
+               calls direct
+               XSTACK = 00000000 ( 0000000F )
+    -------------------------------------------------------------------------
+NEAR_CODE
+  Relative segment, address: CODE 00000AC7 - 00000B16 (0x50 bytes), align: 0
+  Segment part 13.            Intra module refs:   usbfwResetHandler
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           usbfwSetAllEpStatus     00000AC7        usbsrSetConfiguration (usb_standard_requests)
+               ISTACK = 00000000 ( 00000003 )
+    -------------------------------------------------------------------------
+NEAR_CODE
+  Relative segment, address: CODE 00000B17 - 00000B66 (0x50 bytes), align: 0
+  Segment part 14.            Intra module refs:   usbfwSetupHandler
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           usbfwReadFifo           00000B17        usbInProcess (usb_uart)
+               XSTACK = 0000000F ( 0000000A )
+               ISTACK = 00000000 ( 00000001 )
+    -------------------------------------------------------------------------
+NEAR_CODE
+  Relative segment, address: CODE 00000B67 - 00000BB6 (0x50 bytes), align: 0
+  Segment part 15.            Intra module refs:   usbfwSetupHandler
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           usbfwWriteFifo          00000B67        usbOutProcess (usb_uart)
+               XSTACK = 0000000F ( 0000000A )
+               ISTACK = 00000000 ( 00000001 )
+
+    *************************************************************************
+
+  FILE NAME : C:\Users\marti\Thesis\zboss_firmware_src_\hw\release\CC2531\Obj\usb_interrupt.r51
+  PROGRAM MODULE, NAME : usb_interrupt
+
+  SEGMENTS IN THE MODULE
+  ======================
+DATA_Z
+  Relative segment, address: DATA 00000012 - 00000016 (0x5 bytes), align: 0
+  Segment part 12.            Intra module refs:   usbirqHandler
+                                                   usbirqInit
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           usbirqData              00000012        usbEventProcess (usb_uart)
+                                                   usbsuspEnter (usb_suspend)
+    -------------------------------------------------------------------------
+SFR_AN
+  Relative segment, address: DATA 0000008B - 0000008B (0x1 bytes), align: 0
+  Segment part 1. ROOT        Intra module refs:   usbirqHandler
+                                                   usbirqInit
+                                                   usbsuspEnter (usb_suspend)
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           P2IFG                   0000008B 
+    -------------------------------------------------------------------------
+SFR_AN
+  Relative segment, address: DATA 0000009A - 0000009A (0x1 bytes), align: 0
+  Segment part 2. ROOT        Intra module refs:   usbOutProcess (usb_uart)
+                                                   usbirqInit
+                                                   usbsuspEnter (usb_suspend)
+                                                   zb_rf_start_tx (zb_sniffer_radio)
+                                                   zb_sniffer_rf_init_radio (zb_sniffer_radio)
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           IEN2                    0000009A 
+    -------------------------------------------------------------------------
+SFR_AN
+  Relative segment, address: DATA 0000009D - 0000009D (0x1 bytes), align: 0
+  Segment part 3. ROOT        Intra module refs:   usbirqHandler
+                                                   usbsuspEnter (usb_suspend)
+                                                   zb_sniffer_clock_set_src (zb_sniffer_time)
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           SLEEPSTA                0000009D 
+    -------------------------------------------------------------------------
+SFR_AN
+  Relative segment, address: DATA 000000AC - 000000AC (0x1 bytes), align: 0
+  Segment part 4. ROOT        Intra module refs:   usbOutProcess (usb_uart)
+                                                   usbirqInit
+                                                   usbsuspEnter (usb_suspend)
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           P2IEN                   000000AC 
+    -------------------------------------------------------------------------
+SFR_AN
+  Relative segment, address: DATA 000000E8 - 000000E8 (0x1 bytes), align: 0
+  Segment part 5. ROOT        Intra module refs:   usbirqHandler
+                                                   usbirqInit
+                                                   usbsuspEnter (usb_suspend)
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           _A_IRCON2               000000E8 
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           IRCON2                  000000E8 
+    -------------------------------------------------------------------------
+NEAR_CODE
+  Relative segment, address: CODE 00000BB7 - 00000C01 (0x4b bytes), align: 0
+  Segment part 13.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           usbirqInit              00000BB7        usbUartInit (usb_uart)
+               XSTACK = 00000000 ( 00000009 )
+    -------------------------------------------------------------------------
+NEAR_CODE
+  Relative segment, address: CODE 00000C02 - 00000CBF (0xbe bytes), align: 0
+  Segment part 14.            Intra module refs:   usbirqHandler::??INTVEC 51
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           usbirqHandler           00000C02 
+               interrupt function
+               calls direct
+               XSTACK = 00000000 ( 00000010 )
+    -------------------------------------------------------------------------
+INTVEC
+  Common segment, address: CODE 00000000 - 00000035 (0x36 bytes), align: 0
+  Segment part 6. ROOT 
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           usbirqHandler::??INTVEC 51
+                                   00000033 
+
+    *************************************************************************
+
+  FILE NAME : C:\Users\marti\Thesis\zboss_firmware_src_\hw\release\CC2531\Obj\usb_standard_requests.r51
+  PROGRAM MODULE, NAME : usb_standard_requests
+
+  SEGMENTS IN THE MODULE
+  ======================
+NEAR_CODE
+  Relative segment, address: CODE 00000CC0 - 00000E26 (0x167 bytes), align: 0
+  Segment part 7.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           usbsrGetStatus          00000CC0        usbfwSetupHandler (usb_framework)
+               ISTACK = 00000000 ( 00000002 )
+    -------------------------------------------------------------------------
+XDATA_Z
+  Relative segment, address: XDATA 00000F23 - 00000F24 (0x2 bytes), align: 0
+  Segment part 6.             Intra module refs:   usbsrGetStatus
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           usbsrGetStatus::status
+                                   00000F23 
+    -------------------------------------------------------------------------
+NEAR_CODE
+  Relative segment, address: CODE 00000E27 - 00000F63 (0x13d bytes), align: 0
+  Segment part 8.             Intra module refs:   usbsrClearFeature
+                                                   usbsrSetFeature
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           ChangeFeature           00000E27 
+               calls direct
+               XSTACK = 00000000 ( 00000008 )
+               ISTACK = 00000000 ( 00000001 )
+    -------------------------------------------------------------------------
+NEAR_CODE
+  Relative segment, address: CODE 00000F64 - 00000F72 (0xf bytes), align: 0
+  Segment part 9.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           usbsrClearFeature       00000F64        usbfwSetupHandler (usb_framework)
+               calls direct
+    -------------------------------------------------------------------------
+NEAR_CODE
+  Relative segment, address: CODE 00000F73 - 00000F81 (0xf bytes), align: 0
+  Segment part 10.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           usbsrSetFeature         00000F73        usbfwSetupHandler (usb_framework)
+               calls direct
+    -------------------------------------------------------------------------
+NEAR_CODE
+  Relative segment, address: CODE 00000F82 - 00000FF8 (0x77 bytes), align: 0
+  Segment part 11.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           usbsrSetAddress         00000F82        usbfwSetupHandler (usb_framework)
+               ISTACK = 00000000 ( 00000002 )
+    -------------------------------------------------------------------------
+NEAR_CODE
+  Relative segment, address: CODE 00000FF9 - 0000135F (0x367 bytes), align: 0
+  Segment part 12.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           usbsrGetDescriptor      00000FF9        usbfwSetupHandler (usb_framework)
+               calls direct
+               XSTACK = 00000000 ( 0000000C )
+    -------------------------------------------------------------------------
+NEAR_CODE
+  Relative segment, address: CODE 00001360 - 000014EF (0x190 bytes), align: 0
+  Segment part 13.            Intra module refs:   usbsrSetConfiguration
+                                                   usbsrSetInterface
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           ConfigureEndpoints      00001360 
+               calls direct
+               XSTACK = 0000000B ( 0000000F )
+    -------------------------------------------------------------------------
+NEAR_CODE
+  Relative segment, address: CODE 000014F0 - 0000154A (0x5b bytes), align: 0
+  Segment part 14.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           usbsrGetConfiguration   000014F0        usbfwSetupHandler (usb_framework)
+               ISTACK = 00000000 ( 00000002 )
+    -------------------------------------------------------------------------
+NEAR_CODE
+  Relative segment, address: CODE 0000154B - 00001670 (0x126 bytes), align: 0
+  Segment part 15.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           usbsrSetConfiguration   0000154B        usbfwSetupHandler (usb_framework)
+               calls direct
+               XSTACK = 00000000 ( 0000000B )
+    -------------------------------------------------------------------------
+NEAR_CODE
+  Relative segment, address: CODE 00001671 - 000016DB (0x6b bytes), align: 0
+  Segment part 16.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           usbsrGetInterface       00001671        usbfwSetupHandler (usb_framework)
+               XSTACK = 00000000 ( 0000000A )
+    -------------------------------------------------------------------------
+NEAR_CODE
+  Relative segment, address: CODE 000016DC - 00001796 (0xbb bytes), align: 0
+  Segment part 17.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           usbsrSetInterface       000016DC        usbfwSetupHandler (usb_framework)
+               calls direct
+               XSTACK = 00000000 ( 0000000B )
+               ISTACK = 00000000 ( 00000001 )
+
+    *************************************************************************
+
+  FILE NAME : C:\Users\marti\Thesis\zboss_firmware_src_\hw\release\CC2531\Obj\usb_suspend.r51
+  PROGRAM MODULE, NAME : usb_suspend
+
+  SEGMENTS IN THE MODULE
+  ======================
+SFR_AN
+  Relative segment, address: DATA 000000BE - 000000BE (0x1 bytes), align: 0
+  Segment part 5. ROOT        Intra module refs:   usbsuspEnter
+                                                   zb_sniffer_clock_set_src (zb_sniffer_time)
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           SLEEPCMD                000000BE 
+    -------------------------------------------------------------------------
+XDATA_Z
+  Relative segment, address: XDATA 00000F25 - 00000F26 (0x2 bytes), align: 0
+  Segment part 12.            Intra module refs:   usbsuspEnter
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           pFnSuspendEnterHook     00000F25 
+    -------------------------------------------------------------------------
+XDATA_Z
+  Relative segment, address: XDATA 00000F27 - 00000F28 (0x2 bytes), align: 0
+  Segment part 13.            Intra module refs:   usbsuspEnter
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           pFnSuspendExitHook      00000F27 
+    -------------------------------------------------------------------------
+NEAR_CODE
+  Relative segment, address: CODE 00001797 - 00001828 (0x92 bytes), align: 0
+  Segment part 14.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           usbsuspEnter            00001797        usbEventProcess (usb_uart)
+               calls direct
+               XSTACK = 00000000 ( 0000000A )
+
+    *************************************************************************
+
+  FILE NAME : C:\Users\marti\Thesis\zboss_firmware_src_\hw\release\CC2531\Obj\usb_uart.r51
+  PROGRAM MODULE, NAME : usb_uart
+
+  SEGMENTS IN THE MODULE
+  ======================
+SFR_AN
+  Relative segment, address: DATA 00000090 - 00000090 (0x1 bytes), align: 0
+  Segment part 1. ROOT        Intra module refs:   usbUartInit
+                                                   zb_rf_start_tx (zb_sniffer_radio)
+                                                   zb_sniffer_leds_init (zb_sniffer_leds)
+                                                   zb_sniffer_leds_iteration (zb_sniffer_leds)
+                                                   zb_sniffer_rf_interrupt_handler (zb_sniffer_radio)
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           _A_P1                   00000090 
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           P1                      00000090 
+    -------------------------------------------------------------------------
+SFR_AN
+  Relative segment, address: DATA 000000A8 - 000000A8 (0x1 bytes), align: 0
+  Segment part 3. ROOT        Intra module refs:   usbInProcess
+                                                   usbUartInit
+                                                   zb_sniffer_rf_interrupt_handler (zb_sniffer_radio)
+                                                   zb_sniffer_transport_clear (zb_sniffer_transport)
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           _A_IEN0                 000000A8 
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           IEN0                    000000A8 
+    -------------------------------------------------------------------------
+SFR_AN
+  Relative segment, address: DATA 000000F4 - 000000F4 (0x1 bytes), align: 0
+  Segment part 5. ROOT        Intra module refs:   usbUartInit
+                                                   zb_sniffer_leds_init (zb_sniffer_leds)
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           P1SEL                   000000F4 
+    -------------------------------------------------------------------------
+SFR_AN
+  Relative segment, address: DATA 000000FE - 000000FE (0x1 bytes), align: 0
+  Segment part 6. ROOT        Intra module refs:   usbUartInit
+                                                   zb_sniffer_leds_init (zb_sniffer_leds)
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           P1DIR                   000000FE 
+    -------------------------------------------------------------------------
+XDATA_Z
+  Relative segment, address: XDATA 00000F29 - 00000F2F (0x7 bytes), align: 0
+  Segment part 12.            Intra module refs:   usbUartInit
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           currentLineCoding       00000F29        usbcrHookProcessIn (usb_cdc_hooks)
+                                                   usbcrHookProcessOut (usb_cdc_hooks)
+    -------------------------------------------------------------------------
+XDATA_Z
+  Relative segment, address: XDATA 00000F30 - 00000FAF (0x80 bytes), align: 0
+  Segment part 13.            Intra module refs:   populate_transport_rb_from_buffer
+                                                   usbInProcess
+                                                   usbOutProcess
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           buffer                  00000F30 
+    -------------------------------------------------------------------------
+XDATA_Z
+  Relative segment, address: XDATA 00000FB0 - 00000FB0 (0x1 bytes), align: 0
+  Segment part 14.            Intra module refs:   usbInProcess
+                                                   usbOutProcess
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           oldEndpoint             00000FB0 
+    -------------------------------------------------------------------------
+XDATA_Z
+  Relative segment, address: XDATA 00000FB1 - 00000FB1 (0x1 bytes), align: 0
+  Segment part 15.            Intra module refs:   populate_transport_rb_from_buffer
+                                                   usbInProcess
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           bytes_arrived           00000FB1 
+    -------------------------------------------------------------------------
+NEAR_CODE
+  Relative segment, address: CODE 00001829 - 00001868 (0x40 bytes), align: 0
+  Segment part 16.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           usbUartInit             00001829        zb_sniffer_usb_init (zb_sniffer_usb)
+               calls direct
+               XSTACK = 00000000 ( 0000000B )
+    -------------------------------------------------------------------------
+NEAR_CODE
+  Relative segment, address: CODE 00001869 - 00001875 (0xd bytes), align: 0
+  Segment part 17.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           usbUartProcess          00001869        zb_sniffer_iteration (zb_sniffer)
+               calls direct
+    -------------------------------------------------------------------------
+NEAR_CODE
+  Relative segment, address: CODE 00001876 - 00001940 (0xcb bytes), align: 0
+  Segment part 18.            Intra module refs:   usbInProcess
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           populate_transport_rb_from_buffer
+                                   00001876 
+               XSTACK = 0000000C ( 0000000A )
+               ISTACK = 00000000 ( 00000001 )
+    -------------------------------------------------------------------------
+NEAR_CODE
+  Relative segment, address: CODE 00001941 - 00001998 (0x58 bytes), align: 0
+  Segment part 19.            Intra module refs:   usbUartProcess
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           usbEventProcess         00001941 
+               calls direct
+    -------------------------------------------------------------------------
+NEAR_CODE
+  Relative segment, address: CODE 00001999 - 00001A60 (0xc8 bytes), align: 0
+  Segment part 20.            Intra module refs:   usbUartProcess
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           usbOutProcess           00001999 
+               calls direct
+               XSTACK = 00000000 ( 0000000F )
+    -------------------------------------------------------------------------
+NEAR_CODE
+  Relative segment, address: CODE 00001A61 - 00001B88 (0x128 bytes), align: 0
+  Segment part 21.            Intra module refs:   usbUartProcess
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           usbInProcess            00001A61 
+               calls direct
+               XSTACK = 00000000 ( 0000000F )
+               ISTACK = 00000000 ( 00000001 )
+
+    *************************************************************************
+
+  FILE NAME : C:\Users\marti\Thesis\zboss_firmware_src_\hw\release\CC2531\Obj\zb_sniffer.r51
+  PROGRAM MODULE, NAME : zb_sniffer
+
+  SEGMENTS IN THE MODULE
+  ======================
+XDATA_Z
+  Relative segment, address: XDATA 00000FB2 - 00001BCF (0xc1e bytes), align: 0
+  Segment part 6.             Intra module refs:   zb_sniffer_iteration
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           transport_rb            00000FB2        populate_transport_rb_from_buffer (usb_uart)
+                                                   usbOutProcess (usb_uart)
+                                                   zb_rf_start_tx (zb_sniffer_radio)
+                                                   zb_sniffer_get_next_block_for_host (zb_sniffer_transport)
+                                                   zb_sniffer_rf_interrupt_handler (zb_sniffer_radio)
+                                                   zb_sniffer_send_iteration (zb_sniffer_radio)
+                                                   zb_sniffer_transport_clear (zb_sniffer_transport)
+    -------------------------------------------------------------------------
+XDATA_Z
+  Relative segment, address: XDATA 00001BD0 - 00001BDD (0xe bytes), align: 0
+  Segment part 7.             Intra module refs:   zb_sniffer_process_incoming_cmds
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           cmd_rb                  00001BD0        usbInProcess (usb_uart)
+                                                   zb_sniffer_transport_init (zb_sniffer_transport)
+    -------------------------------------------------------------------------
+XDATA_Z
+  Relative segment, address: XDATA 00001BDE - 00001BDE (0x1 bytes), align: 0
+  Segment part 8.             Intra module refs:   execute_cmd
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           packet_is_arriving      00001BDE        usbInProcess (usb_uart)
+                                                   usbOutProcess (usb_uart)
+    -------------------------------------------------------------------------
+NEAR_CODE
+  Relative segment, address: CODE 00001B89 - 00001B98 (0x10 bytes), align: 0
+  Segment part 9.             Intra module refs:   main
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           zb_sniffer_init         00001B89 
+               calls direct
+    -------------------------------------------------------------------------
+NEAR_CODE
+  Relative segment, address: CODE 00001B99 - 00001BA2 (0xa bytes), align: 0
+  Segment part 10.            Intra module refs:   execute_cmd
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           zb_sniffer_start        00001B99 
+               calls direct
+    -------------------------------------------------------------------------
+NEAR_CODE
+  Relative segment, address: CODE 00001BA3 - 00001BAF (0xd bytes), align: 0
+  Segment part 11.            Intra module refs:   execute_cmd
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           zb_sniffer_stop         00001BA3 
+               calls direct
+    -------------------------------------------------------------------------
+NEAR_CODE
+  Relative segment, address: CODE 00001BB0 - 00001BF9 (0x4a bytes), align: 0
+  Segment part 12.            Intra module refs:   zb_sniffer_process_incoming_cmds
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           execute_cmd             00001BB0 
+               calls direct
+               ISTACK = 00000000 ( 00000002 )
+    -------------------------------------------------------------------------
+NEAR_CODE
+  Relative segment, address: CODE 00001BFA - 00001C49 (0x50 bytes), align: 0
+  Segment part 13.            Intra module refs:   zb_sniffer_iteration
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           zb_sniffer_process_incoming_cmds
+                                   00001BFA 
+               calls direct
+               ISTACK = 00000000 ( 00000002 )
+    -------------------------------------------------------------------------
+NEAR_CODE
+  Relative segment, address: CODE 00001C4A - 00001C7E (0x35 bytes), align: 0
+  Segment part 14.            Intra module refs:   main
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           zb_sniffer_iteration    00001C4A 
+               calls direct
+               ISTACK = 00000000 ( 00000002 )
+    -------------------------------------------------------------------------
+NEAR_CODE
+  Relative segment, address: CODE 00001C7F - 00001C86 (0x8 bytes), align: 0
+  Segment part 15.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           main                    00001C7F        ?call_main (?cmain)
+               calls direct
+
+    *************************************************************************
+
+  FILE NAME : C:\Users\marti\Thesis\zboss_firmware_src_\hw\release\CC2531\Obj\zb_sniffer_leds.r51
+  PROGRAM MODULE, NAME : zb_sniffer_leds
+
+  SEGMENTS IN THE MODULE
+  ======================
+SFR_AN
+  Relative segment, address: DATA 00000080 - 00000080 (0x1 bytes), align: 0
+  Segment part 1. ROOT        Intra module refs:   zb_sniffer_leds_init
+                                                   zb_sniffer_leds_iteration
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           _A_P0                   00000080 
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           P0                      00000080 
+    -------------------------------------------------------------------------
+SFR_AN
+  Relative segment, address: DATA 000000F3 - 000000F3 (0x1 bytes), align: 0
+  Segment part 3. ROOT        Intra module refs:   zb_sniffer_leds_init
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           P0SEL                   000000F3 
+    -------------------------------------------------------------------------
+SFR_AN
+  Relative segment, address: DATA 000000FD - 000000FD (0x1 bytes), align: 0
+  Segment part 5. ROOT        Intra module refs:   zb_sniffer_leds_init
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           P0DIR                   000000FD 
+    -------------------------------------------------------------------------
+XDATA_Z
+  Relative segment, address: XDATA 00001BDF - 00001BDF (0x1 bytes), align: 0
+  Segment part 12.            Intra module refs:   zb_sniffer_leds_init
+                                                   zb_sniffer_leds_iteration
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           is_not_sniffing         00001BDF 
+    -------------------------------------------------------------------------
+XDATA_Z
+  Relative segment, address: XDATA 00001BE0 - 00001BE0 (0x1 bytes), align: 0
+  Segment part 13.            Intra module refs:   zb_sniffer_leds_init
+                                                   zb_sniffer_leds_iteration
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           is_in_fifo_overflow     00001BE0 
+    -------------------------------------------------------------------------
+XDATA_Z
+  Relative segment, address: XDATA 00001BE1 - 00001BE1 (0x1 bytes), align: 0
+  Segment part 14.            Intra module refs:   zb_sniffer_leds_init
+                                                   zb_sniffer_leds_iteration
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           is_in_buf_overflow      00001BE1 
+    -------------------------------------------------------------------------
+XDATA_Z
+  Relative segment, address: XDATA 00001BE2 - 00001BE2 (0x1 bytes), align: 0
+  Segment part 15.            Intra module refs:   zb_sniffer_leds_init
+                                                   zb_sniffer_leds_iteration
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           steps                   00001BE2 
+    -------------------------------------------------------------------------
+XDATA_Z
+  Relative segment, address: XDATA 00001BE3 - 00001BE4 (0x2 bytes), align: 0
+  Segment part 16.            Intra module refs:   zb_sniffer_leds_init
+                                                   zb_sniffer_leds_iteration
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           cycles                  00001BE3 
+    -------------------------------------------------------------------------
+NEAR_CODE
+  Relative segment, address: CODE 00001C87 - 00001CC7 (0x41 bytes), align: 0
+  Segment part 17.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           zb_sniffer_leds_init    00001C87        zb_sniffer_init (zb_sniffer)
+               ISTACK = 00000000 ( 00000002 )
+    -------------------------------------------------------------------------
+NEAR_CODE
+  Relative segment, address: CODE 00001CC8 - 00001DD6 (0x10f bytes), align: 0
+  Segment part 18.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           zb_sniffer_leds_iteration
+                                   00001CC8        zb_sniffer_iteration (zb_sniffer)
+               ISTACK = 00000000 ( 00000002 )
+
+    *************************************************************************
+
+  FILE NAME : C:\Users\marti\Thesis\zboss_firmware_src_\hw\release\CC2531\Obj\zb_sniffer_radio.r51
+  PROGRAM MODULE, NAME : zb_sniffer_radio
+
+  SEGMENTS IN THE MODULE
+  ======================
+SFR_AN
+  Relative segment, address: DATA 00000088 - 00000088 (0x1 bytes), align: 0
+  Segment part 1. ROOT        Intra module refs:   zb_sniffer_rferr_interrupt_handler
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           _A_TCON                 00000088 
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           TCON                    00000088 
+    -------------------------------------------------------------------------
+SFR_AN
+  Relative segment, address: DATA 00000091 - 00000091 (0x1 bytes), align: 0
+  Segment part 3. ROOT        Intra module refs:   zb_rf_start_tx
+                                                   zb_sniffer_rf_interrupt_handler
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           RFIRQF1                 00000091 
+    -------------------------------------------------------------------------
+SFR_AN
+  Relative segment, address: DATA 0000009B - 0000009B (0x1 bytes), align: 0
+  Segment part 5. ROOT        Intra module refs:   zb_sniffer_rf_interrupt_handler
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           S1CON                   0000009B 
+    -------------------------------------------------------------------------
+SFR_AN
+  Relative segment, address: DATA 000000BF - 000000BF (0x1 bytes), align: 0
+  Segment part 7. ROOT        Intra module refs:   zb_sniffer_rf_interrupt_handler
+                                                   zb_sniffer_rferr_interrupt_handler
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           RFERRF                  000000BF 
+    -------------------------------------------------------------------------
+SFR_AN
+  Relative segment, address: DATA 000000D9 - 000000D9 (0x1 bytes), align: 0
+  Segment part 8. ROOT        Intra module refs:   zb_rf_start_tx
+                                                   zb_sniffer_rf_interrupt_handler
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           RFD                     000000D9 
+    -------------------------------------------------------------------------
+SFR_AN
+  Relative segment, address: DATA 000000E1 - 000000E1 (0x1 bytes), align: 0
+  Segment part 9. ROOT        Intra module refs:   zb_rf_start_tx
+                                                   zb_sniffer_rf_interrupt_handler
+                                                   zb_sniffer_rf_start_rx
+                                                   zb_sniffer_rf_stop_rx
+                                                   zb_sniffer_rferr_interrupt_handler
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           RFST                    000000E1 
+    -------------------------------------------------------------------------
+SFR_AN
+  Relative segment, address: DATA 000000E9 - 000000E9 (0x1 bytes), align: 0
+  Segment part 10. ROOT       Intra module refs:   zb_sniffer_rf_interrupt_handler
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           RFIRQF0                 000000E9 
+    -------------------------------------------------------------------------
+XDATA_Z
+  Relative segment, address: XDATA 00001BE5 - 00001BE5 (0x1 bytes), align: 0
+  Segment part 18.            Intra module refs:   zb_sniffer_rf_init_radio
+                                                   zb_sniffer_rf_start_rx
+                                                   zb_sniffer_rf_stop_rx
+                                                   zb_sniffer_send_iteration
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           is_sniffing             00001BE5        usbOutProcess (usb_uart)
+                                                   zb_sniffer_iteration (zb_sniffer)
+    -------------------------------------------------------------------------
+XDATA_Z
+  Relative segment, address: XDATA 00001BE6 - 00001BE6 (0x1 bytes), align: 0
+  Segment part 19.            Intra module refs:   zb_sniffer_rf_init_radio
+                                                   zb_sniffer_rferr_interrupt_handler
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           fifo_overflow           00001BE6        zb_sniffer_iteration (zb_sniffer)
+    -------------------------------------------------------------------------
+NEAR_CODE
+  Relative segment, address: CODE 00001DD7 - 00001E27 (0x51 bytes), align: 0
+  Segment part 20.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           zb_sniffer_rf_init_radio
+                                   00001DD7        zb_sniffer_init (zb_sniffer)
+               ISTACK = 00000000 ( 00000002 )
+    -------------------------------------------------------------------------
+NEAR_CODE
+  Relative segment, address: CODE 00001E28 - 00001E45 (0x1e bytes), align: 0
+  Segment part 21.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           zb_sniffer_rf_start_rx
+                                   00001E28        zb_sniffer_start (zb_sniffer)
+               ISTACK = 00000000 ( 00000002 )
+    -------------------------------------------------------------------------
+NEAR_CODE
+  Relative segment, address: CODE 00001E46 - 00001E5F (0x1a bytes), align: 0
+  Segment part 22.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           zb_set_channel          00001E46        execute_cmd (zb_sniffer)
+               ISTACK = 00000000 ( 00000002 )
+    -------------------------------------------------------------------------
+NEAR_CODE
+  Relative segment, address: CODE 00001E60 - 00001E85 (0x26 bytes), align: 0
+  Segment part 24.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           zb_sniffer_send_iteration
+                                   00001E60        zb_sniffer_iteration (zb_sniffer)
+               calls direct
+               ISTACK = 00000000 ( 00000002 )
+    -------------------------------------------------------------------------
+NEAR_CODE
+  Relative segment, address: CODE 00001E86 - 00001F42 (0xbd bytes), align: 0
+  Segment part 25.            Intra module refs:   zb_sniffer_send_iteration
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           zb_rf_start_tx          00001E86 
+               XSTACK = 00000000 ( 0000000A )
+    -------------------------------------------------------------------------
+NEAR_CODE
+  Relative segment, address: CODE 00001F43 - 00001F63 (0x21 bytes), align: 0
+  Segment part 26.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           zb_sniffer_rf_stop_rx   00001F43        zb_sniffer_stop (zb_sniffer)
+               ISTACK = 00000000 ( 00000002 )
+    -------------------------------------------------------------------------
+NEAR_CODE
+  Relative segment, address: CODE 00001F64 - 00002056 (0xf3 bytes), align: 0
+  Segment part 27.            Intra module refs:   zb_sniffer_rf_interrupt_handler::??INTVEC 131
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           zb_sniffer_rf_interrupt_handler
+                                   00001F64 
+               interrupt function
+               XSTACK = 00000000 ( 00000011 )
+               ISTACK = 00000000 ( 00000001 )
+    -------------------------------------------------------------------------
+NEAR_CODE
+  Relative segment, address: CODE 00002057 - 0000207F (0x29 bytes), align: 0
+  Segment part 28.            Intra module refs:   zb_sniffer_rferr_interrupt_handler::??INTVEC 3
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           zb_sniffer_rferr_interrupt_handler
+                                   00002057 
+               interrupt function
+               ISTACK = 00000000 ( 00000005 )
+    -------------------------------------------------------------------------
+INTVEC
+  Common segment, address: CODE 00000000 - 00000005 (0x6 bytes), align: 0
+  Segment part 11. ROOT 
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           zb_sniffer_rferr_interrupt_handler::??INTVEC 3
+                                   00000003 
+    -------------------------------------------------------------------------
+INTVEC
+  Common segment, address: CODE 00000000 - 00000085 (0x86 bytes), align: 0
+  Segment part 12. ROOT 
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           zb_sniffer_rf_interrupt_handler::??INTVEC 131
+                                   00000083 
+
+    *************************************************************************
+
+  FILE NAME : C:\Users\marti\Thesis\zboss_firmware_src_\hw\release\CC2531\Obj\zb_sniffer_time.r51
+  PROGRAM MODULE, NAME : zb_sniffer_time
+
+  SEGMENTS IN THE MODULE
+  ======================
+SFR_AN
+  Relative segment, address: DATA 0000009E - 0000009E (0x1 bytes), align: 0
+  Segment part 2. ROOT        Intra module refs:   zb_sniffer_clock_set_src
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           CLKCONSTA               0000009E 
+    -------------------------------------------------------------------------
+SFR_AN
+  Relative segment, address: DATA 000000AF - 000000AF (0x1 bytes), align: 0
+  Segment part 3. ROOT        Intra module refs:   zb_sniffer_timer_init
+                                                   zb_sniffer_timer_interrupt_handler
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           T1STAT                  000000AF 
+    -------------------------------------------------------------------------
+SFR_AN
+  Relative segment, address: DATA 000000B8 - 000000B8 (0x1 bytes), align: 0
+  Segment part 4. ROOT        Intra module refs:   zb_sniffer_timer_init
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           _A_IEN1                 000000B8 
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           IEN1                    000000B8 
+    -------------------------------------------------------------------------
+SFR_AN
+  Relative segment, address: DATA 000000C6 - 000000C6 (0x1 bytes), align: 0
+  Segment part 6. ROOT        Intra module refs:   zb_sniffer_clock_set_src
+                                                   zb_sniffer_init_clock
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           CLKCONCMD               000000C6 
+    -------------------------------------------------------------------------
+SFR_AN
+  Relative segment, address: DATA 000000DA - 000000DA (0x1 bytes), align: 0
+  Segment part 7. ROOT        Intra module refs:   zb_sniffer_start_timer
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           T1CC0L                  000000DA 
+    -------------------------------------------------------------------------
+SFR_AN
+  Relative segment, address: DATA 000000DB - 000000DB (0x1 bytes), align: 0
+  Segment part 8. ROOT        Intra module refs:   zb_sniffer_start_timer
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           T1CC0H                  000000DB 
+    -------------------------------------------------------------------------
+SFR_AN
+  Relative segment, address: DATA 000000E4 - 000000E4 (0x1 bytes), align: 0
+  Segment part 9. ROOT        Intra module refs:   zb_sniffer_start_timer
+                                                   zb_sniffer_stop_timer
+                                                   zb_sniffer_timer_init
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           T1CTL                   000000E4 
+    -------------------------------------------------------------------------
+SFR_AN
+  Relative segment, address: DATA 000000E5 - 000000E5 (0x1 bytes), align: 0
+  Segment part 10. ROOT       Intra module refs:   zb_sniffer_timer_init
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           T1CCTL0                 000000E5 
+    -------------------------------------------------------------------------
+XDATA_Z
+  Relative segment, address: XDATA 00001BE7 - 00001BEA (0x4 bytes), align: 0
+  Segment part 17.            Intra module refs:   zb_sniffer_stop_timer
+                                                   zb_sniffer_timer_init
+                                                   zb_sniffer_timer_interrupt_handler
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           timer                   00001BE7 
+    -------------------------------------------------------------------------
+XDATA_Z
+  Relative segment, address: XDATA 00001BEB - 00001BEB (0x1 bytes), align: 0
+  Segment part 18.            Intra module refs:   zb_sniffer_start_timer
+                                                   zb_sniffer_stop_timer
+                                                   zb_sniffer_timer_init
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           is_ticking              00001BEB 
+    -------------------------------------------------------------------------
+NEAR_CODE
+  Relative segment, address: CODE 00002080 - 00002086 (0x7 bytes), align: 0
+  Segment part 21.            Intra module refs:   zb_sniffer_timer_init
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           zb_sniffer_init_clock   00002080 
+    -------------------------------------------------------------------------
+NEAR_CODE
+  Relative segment, address: CODE 00002087 - 000020A3 (0x1d bytes), align: 0
+  Segment part 22.            Intra module refs:   zb_sniffer_timer_init
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           zb_sniffer_clock_set_src
+                                   00002087 
+    -------------------------------------------------------------------------
+NEAR_CODE
+  Relative segment, address: CODE 000020A4 - 000020DA (0x37 bytes), align: 0
+  Segment part 23.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           zb_sniffer_timer_init   000020A4        zb_sniffer_init (zb_sniffer)
+               calls direct
+               ISTACK = 00000000 ( 00000002 )
+    -------------------------------------------------------------------------
+NEAR_CODE
+  Relative segment, address: CODE 000020DB - 000020FF (0x25 bytes), align: 0
+  Segment part 24.            Intra module refs:   zb_sniffer_timer_interrupt_handler::??INTVEC 75
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           zb_sniffer_timer_interrupt_handler
+                                   000020DB 
+               interrupt function
+               XSTACK = 00000000 ( 00000012 )
+    -------------------------------------------------------------------------
+NEAR_CODE
+  Relative segment, address: CODE 00002100 - 00002123 (0x24 bytes), align: 0
+  Segment part 25.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           zb_sniffer_start_timer
+                                   00002100        zb_sniffer_start (zb_sniffer)
+               ISTACK = 00000000 ( 00000002 )
+    -------------------------------------------------------------------------
+NEAR_CODE
+  Relative segment, address: CODE 00002124 - 00002153 (0x30 bytes), align: 0
+  Segment part 26.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           zb_sniffer_stop_timer   00002124        zb_sniffer_stop (zb_sniffer)
+               ISTACK = 00000000 ( 00000002 )
+    -------------------------------------------------------------------------
+INTVEC
+  Common segment, address: CODE 00000000 - 0000004D (0x4e bytes), align: 0
+  Segment part 11. ROOT 
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           zb_sniffer_timer_interrupt_handler::??INTVEC 75
+                                   0000004B 
+    -------------------------------------------------------------------------
+XDATA_I
+  Relative segment, address: XDATA 00001BFC - 00001BFF (0x4 bytes), align: 0
+  Segment part 19.            Intra module refs:   zb_sniffer_timer_interrupt_handler
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           __Constant_1            00001BFC 
+    -------------------------------------------------------------------------
+XDATA_ID
+  Relative segment, address: CODE 000000F3 - 000000F6 (0x4 bytes), align: 0
+  Segment part 20.            Intra module refs:   __Constant_1
+
+    *************************************************************************
+
+  FILE NAME : C:\Users\marti\Thesis\zboss_firmware_src_\hw\release\CC2531\Obj\zb_sniffer_transport.r51
+  PROGRAM MODULE, NAME : zb_sniffer_transport
+
+  SEGMENTS IN THE MODULE
+  ======================
+XDATA_Z
+  Relative segment, address: XDATA 00001BEC - 00001BEF (0x4 bytes), align: 0
+  Segment part 7.             Intra module refs:   zb_sniffer_get_next_block_for_host
+                                                   zb_sniffer_transport_clear
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           transport_ctx           00001BEC 
+    -------------------------------------------------------------------------
+XDATA_I
+  Relative segment, address: XDATA 00001C00 - 00001C01 (0x2 bytes), align: 0
+  Segment part 8.             Intra module refs:   zb_sniffer_get_next_block_for_host
+                                                   zb_sniffer_transport_clear
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           preamble                00001C00 
+    -------------------------------------------------------------------------
+NEAR_CODE
+  Relative segment, address: CODE 00002154 - 00002184 (0x31 bytes), align: 0
+  Segment part 10.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           zb_sniffer_transport_init
+                                   00002154        zb_sniffer_init (zb_sniffer)
+               calls direct
+               ISTACK = 00000000 ( 00000002 )
+    -------------------------------------------------------------------------
+NEAR_CODE
+  Relative segment, address: CODE 00002185 - 000021CB (0x47 bytes), align: 0
+  Segment part 11.            Intra module refs:   zb_sniffer_transport_init
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           zb_sniffer_transport_clear
+                                   00002185        zb_sniffer_stop (zb_sniffer)
+               ISTACK = 00000000 ( 00000002 )
+    -------------------------------------------------------------------------
+NEAR_CODE
+  Relative segment, address: CODE 000021CC - 000022F1 (0x126 bytes), align: 0
+  Segment part 12.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           zb_sniffer_get_next_block_for_host
+                                   000021CC        usbOutProcess (usb_uart)
+               XSTACK = 00000000 ( 0000000A )
+    -------------------------------------------------------------------------
+XDATA_ID
+  Relative segment, address: CODE 000000F7 - 000000F8 (0x2 bytes), align: 0
+  Segment part 9.             Intra module refs:   preamble
+
+    *************************************************************************
+
+  FILE NAME : C:\Users\marti\Thesis\zboss_firmware_src_\hw\release\CC2531\Obj\zb_sniffer_usb.r51
+  PROGRAM MODULE, NAME : zb_sniffer_usb
+
+  SEGMENTS IN THE MODULE
+  ======================
+NEAR_CODE
+  Relative segment, address: CODE 000022F2 - 00002309 (0x18 bytes), align: 0
+  Segment part 8.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           zb_sniffer_usb_init     000022F2        zb_sniffer_transport_init (zb_sniffer_transport)
+               calls direct
+               ISTACK = 00000000 ( 00000002 )
+    -------------------------------------------------------------------------
+XDATA_I
+  Relative segment, address: XDATA 00001C02 - 00001C05 (0x4 bytes), align: 0
+  Segment part 6.             Intra module refs:   zb_sniffer_usb_init
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           __Constant_6            00001C02 
+    -------------------------------------------------------------------------
+XDATA_ID
+  Relative segment, address: CODE 000000F9 - 000000FC (0x4 bytes), align: 0
+  Segment part 7.             Intra module refs:   __Constant_6
+
+    *************************************************************************
+
+  FILE NAME : C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\8051\LIB\CLIB\cl-pli-nlxd-2e16inc.r51
+  LIBRARY MODULE, NAME : ?cexit
+
+  SEGMENTS IN THE MODULE
+  ======================
+CSTART
+  Relative segment, address: CODE 00000086 - 0000008A (0x5 bytes), align: 0
+  Segment part 0.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           exit                    00000086        ?call_main (?cmain)
+           ?C_EXIT                 00000086 
+           ?ROM_MONITOR_NOPS       00000086 
+
+    -------------------------------------------------------------------------
+  LIBRARY MODULE, NAME : ?cmain
+
+  SEGMENTS IN THE MODULE
+  ======================
+CSTART
+  Relative segment, address: CODE 0000008B, align: 0
+  Segment part 5.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           ?cmain                  0000008B        Segment part 14 (CSTARTUP)
+               calls direct
+    -------------------------------------------------------------------------
+CSTART
+  Relative segment, address: CODE 0000008B - 00000098 (0xe bytes), align: 0
+  Segment part 10.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           __INIT_DATA_Z           0000008B        ProcessFunc (usb_framework)
+                                                   usbirqData (usb_interrupt)
+    -------------------------------------------------------------------------
+CSTART
+  Relative segment, address: CODE 00000099 - 000000A8 (0x10 bytes), align: 0
+  Segment part 16.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           __INIT_XDATA_Z          00000099        buffer (usb_uart)
+                                                   bytes_arrived (usb_uart)
+                                                   cmd_rb (zb_sniffer)
+                                                   currentLineCoding (usb_uart)
+                                                   cycles (zb_sniffer_leds)
+                                                   fifo_overflow (zb_sniffer_radio)
+                                                   is_in_buf_overflow (zb_sniffer_leds)
+                                                   is_in_fifo_overflow (zb_sniffer_leds)
+                                                   is_not_sniffing (zb_sniffer_leds)
+                                                   is_sniffing (zb_sniffer_radio)
+                                                   is_ticking (zb_sniffer_time)
+                                                   oldEndpoint (usb_uart)
+                                                   pFnSuspendEnterHook (usb_suspend)
+                                                   pFnSuspendExitHook (usb_suspend)
+                                                   packet_is_arriving (zb_sniffer)
+                                                   steps (zb_sniffer_leds)
+                                                   timer (zb_sniffer_time)
+                                                   transport_ctx (zb_sniffer_transport)
+                                                   transport_rb (zb_sniffer)
+                                                   usbSetupData (usb_framework)
+                                                   usbSetupHeader (usb_framework)
+                                                   usbdpData (usb_descriptor_parser)
+                                                   usbfwData (usb_framework)
+                                                   usbsrGetStatus::status (usb_standard_requests)
+    -------------------------------------------------------------------------
+CSTART
+  Relative segment, address: CODE 000000A9 - 000000CE (0x26 bytes), align: 0
+  Segment part 33.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           __INIT_XDATA_I          000000A9        __Constant_1 (zb_sniffer_time)
+                                                   __Constant_6 (zb_sniffer_usb)
+                                                   preamble (zb_sniffer_transport)
+                                                   usbDescriptorMarker (usb_firmware_library_config)
+    -------------------------------------------------------------------------
+CSTART
+  Relative segment, address: CODE 000000CF - 000000D4 (0x6 bytes), align: 0
+  Segment part 38.            Intra module refs:   ?cmain
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           ?call_main              000000CF 
+
+    -------------------------------------------------------------------------
+  LIBRARY MODULE, NAME : CSTARTUP
+
+  SEGMENTS IN THE MODULE
+  ======================
+REGISTERS
+  Relative segment, address: DATA 00000000, align: 0
+  Segment part 0.             Intra module refs:   Segment part 6
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           ?REGISTERS              00000000 
+    -------------------------------------------------------------------------
+ISTACK
+  Relative segment, address: IDATA 000000C0, align: 0
+  Segment part 1.             Intra module refs:   Segment part 6
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           ?ISTACK_START           000000C0 
+    -------------------------------------------------------------------------
+XSTACK
+  Relative segment, address: XDATA 00000001, align: 0
+  Segment part 3.             Intra module refs:   ?RESET_XSP
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           ?XSTACK_START           00000001 
+    -------------------------------------------------------------------------
+INTVEC
+  Common segment, address: CODE 00000000 - 00000002 (0x3 bytes), align: 0
+  Segment part 5. ROOT        Intra module refs:   Segment part 6
+    -------------------------------------------------------------------------
+CSTART
+  Relative segment, address: CODE 000000D5 - 000000DA (0x6 bytes), align: 0
+  Segment part 6. ROOT        Intra module refs:   Segment part 5
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           __program_start         000000D5        Absolute parts (?ABS_ENTRY_MOD)
+           ?RESET_SP               000000D8 
+    -------------------------------------------------------------------------
+CSTART
+  Relative segment, address: CODE 000000DB - 000000E0 (0x6 bytes), align: 0
+  Segment part 8.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           ?RESET_XSP              000000DB        ?XSP (VIRTUAL_REGISTERS)
+    -------------------------------------------------------------------------
+CSTART
+  Relative segment, address: CODE 000000E1 - 000000E3 (0x3 bytes), align: 0
+  Segment part 12.            Intra module refs:   Absolute parts
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           ?RESET_DPS              000000E1 
+    -------------------------------------------------------------------------
+CSTART
+  Relative segment, address: CODE 000000E4 - 000000E6 (0x3 bytes), align: 0
+  Segment part 14.            Intra module refs:   Absolute parts
+
+    -------------------------------------------------------------------------
+  LIBRARY MODULE, NAME : VIRTUAL_REGISTERS
+
+  SEGMENTS IN THE MODULE
+  ======================
+BREG
+  Relative segment, address: BIT 00000020.0 - 00000020.7 (0x8 bits), align: 0
+  Segment part 0.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           ?B0                     00000020.0      Absolute parts (CSTARTUP)
+    -------------------------------------------------------------------------
+VREG
+  Relative segment, address: DATA 00000008 - 00000008 (0x1 bytes), align: 0
+  Segment part 1.             Intra module refs:   ?V1
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           ?V0                     00000008        ?FUNC_ENTER_XDATA (?FUNC_ENTER_XDATA)
+                                                   ?FUNC_LEAVE_XDATA (?FUNC_LEAVE_XDATA)
+                                                   ?INTERRUPT_ENTER_XSP (?INTERRUPT_ENTER_XSP)
+                                                   ?INTERRUPT_LEAVE_XSP (?INTERRUPT_LEAVE_XSP)
+                                                   ConfigureEndpoints (usb_standard_requests)
+                                                   usbInProcess (usb_uart)
+                                                   usbOutProcess (usb_uart)
+                                                   usbUartInit (usb_uart)
+                                                   usbdpGetConfigurationDesc (usb_descriptor_parser)
+                                                   usbdpGetInterfaceDesc (usb_descriptor_parser)
+                                                   usbdpGetStringDesc (usb_descriptor_parser)
+                                                   usbfwInit (usb_framework)
+                                                   usbfwSetupHandler (usb_framework)
+                                                   usbirqHandler (usb_interrupt)
+                                                   usbirqInit (usb_interrupt)
+                                                   usbsrGetDescriptor (usb_standard_requests)
+                                                   usbsrGetInterface (usb_standard_requests)
+                                                   usbsrSetConfiguration (usb_standard_requests)
+                                                   usbsrSetInterface (usb_standard_requests)
+                                                   zb_sniffer_timer_interrupt_handler (zb_sniffer_time)
+    -------------------------------------------------------------------------
+VREG
+  Relative segment, address: DATA 00000009 - 00000009 (0x1 bytes), align: 0
+  Segment part 2.             Intra module refs:   ?V2
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           ?V1                     00000009        usbInProcess (usb_uart)
+                                                   usbOutProcess (usb_uart)
+                                                   usbUartInit (usb_uart)
+                                                   usbdpGetConfigurationDesc (usb_descriptor_parser)
+                                                   usbdpGetStringDesc (usb_descriptor_parser)
+                                                   usbfwInit (usb_framework)
+                                                   usbfwSetupHandler (usb_framework)
+                                                   usbirqHandler (usb_interrupt)
+                                                   usbirqInit (usb_interrupt)
+                                                   usbsrGetDescriptor (usb_standard_requests)
+                                                   usbsrGetInterface (usb_standard_requests)
+                                                   usbsrSetConfiguration (usb_standard_requests)
+                                                   usbsrSetInterface (usb_standard_requests)
+                                                   zb_sniffer_timer_interrupt_handler (zb_sniffer_time)
+    -------------------------------------------------------------------------
+VREG
+  Relative segment, address: DATA 0000000A - 0000000A (0x1 bytes), align: 0
+  Segment part 3.             Intra module refs:   ?V3
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           ?V2                     0000000A        ConfigureEndpoints (usb_standard_requests)
+                                                   usbInProcess (usb_uart)
+                                                   usbOutProcess (usb_uart)
+                                                   usbUartInit (usb_uart)
+                                                   usbdpGetInterfaceDesc (usb_descriptor_parser)
+                                                   usbfwSetupHandler (usb_framework)
+                                                   usbsrGetDescriptor (usb_standard_requests)
+                                                   usbsrGetInterface (usb_standard_requests)
+                                                   zb_sniffer_timer_interrupt_handler (zb_sniffer_time)
+    -------------------------------------------------------------------------
+VREG
+  Relative segment, address: DATA 0000000B - 0000000B (0x1 bytes), align: 0
+  Segment part 4.             Intra module refs:   ?V4
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           ?V3                     0000000B        ConfigureEndpoints (usb_standard_requests)
+                                                   usbUartInit (usb_uart)
+                                                   usbdpGetInterfaceDesc (usb_descriptor_parser)
+                                                   zb_sniffer_timer_interrupt_handler (zb_sniffer_time)
+    -------------------------------------------------------------------------
+VREG
+  Relative segment, address: DATA 0000000C - 0000000C (0x1 bytes), align: 0
+  Segment part 5.             Intra module refs:   ?V5
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           ?V4                     0000000C        ConfigureEndpoints (usb_standard_requests)
+    -------------------------------------------------------------------------
+VREG
+  Relative segment, address: DATA 0000000D - 0000000D (0x1 bytes), align: 0
+  Segment part 6.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           ?V5                     0000000D        ConfigureEndpoints (usb_standard_requests)
+    -------------------------------------------------------------------------
+XSP
+  Relative segment, address: DATA 0000000E - 0000000F (0x2 bytes), align: 0
+  Segment part 34.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           ?XSP                    0000000E        ?ADD_XSTACK_DISP0_8 (?ADD_XSTACK_DISP8)
+                                                   ?ALLOC_XSTACK8 (?ALLOC_XSTACK8)
+                                                   ?DEALLOC_XSTACK8 (?DEALLOC_XSTACK8)
+                                                   ?FUNC_ENTER_XDATA (?FUNC_ENTER_XDATA)
+                                                   ?FUNC_LEAVE_XDATA (?FUNC_LEAVE_XDATA)
+                                                   ?INTERRUPT_ENTER_XSP (?INTERRUPT_ENTER_XSP)
+                                                   ?INTERRUPT_LEAVE_XSP (?INTERRUPT_LEAVE_XSP)
+                                                   ?RESET_XSP (CSTARTUP)
+                                                   ConfigureEndpoints (usb_standard_requests)
+                                                   Segment part 1 (?XSTACK_DISP8)
+                                                   memcpy (?memcpy)
+                                                   populate_transport_rb_from_buffer (usb_uart)
+                                                   usbInProcess (usb_uart)
+                                                   usbOutProcess (usb_uart)
+                                                   usbdpFindNext (usb_descriptor_parser)
+                                                   usbfwReadFifo (usb_framework)
+                                                   usbfwSetupHandler (usb_framework)
+                                                   usbfwWriteFifo (usb_framework)
+                                                   usbsrGetDescriptor (usb_standard_requests)
+                                                   usbsrSetConfiguration (usb_standard_requests)
+                                                   usbsrSetInterface (usb_standard_requests)
+                                                   usbsuspEnter (usb_suspend)
+                                                   zb_rf_start_tx (zb_sniffer_radio)
+                                                   zb_sniffer_get_next_block_for_host (zb_sniffer_transport)
+                                                   zb_sniffer_rf_interrupt_handler (zb_sniffer_radio)
+
+    -------------------------------------------------------------------------
+  LIBRARY MODULE, NAME : ?G_EQ
+
+  SEGMENTS IN THE MODULE
+  ======================
+RCODE
+  Relative segment, address: CODE 000001A8 - 000001B2 (0xb bytes), align: 0
+  Segment part 0.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           ?G_EQ                   000001A8        usbsrGetDescriptor (usb_standard_requests)
+
+    -------------------------------------------------------------------------
+  LIBRARY MODULE, NAME : ?C_GPTR_LOAD
+
+  SEGMENTS IN THE MODULE
+  ======================
+RCODE
+  Relative segment, address: CODE 000001B3 - 000001D3 (0x21 bytes), align: 0
+  Segment part 0.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           ?C_GPTR_LOAD            000001B3        usbfwWriteFifo (usb_framework)
+                                                   usbsrGetDescriptor (usb_standard_requests)
+
+    -------------------------------------------------------------------------
+  LIBRARY MODULE, NAME : ?C_GPTR_STORE
+
+  SEGMENTS IN THE MODULE
+  ======================
+RCODE
+  Relative segment, address: CODE 000001D4 - 000001F0 (0x1d bytes), align: 0
+  Segment part 0.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           ?C_GPTR_STORE           000001D4        usbfwReadFifo (usb_framework)
+
+    -------------------------------------------------------------------------
+  LIBRARY MODULE, NAME : ?L_ADD_TO_X
+
+  SEGMENTS IN THE MODULE
+  ======================
+RCODE
+  Relative segment, address: CODE 000001F1 - 00000203 (0x13 bytes), align: 0
+  Segment part 1.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           ?L_ADD_TO_X             000001F1        zb_sniffer_timer_interrupt_handler (zb_sniffer_time)
+
+    -------------------------------------------------------------------------
+  LIBRARY MODULE, NAME : ?L_MOV_X
+
+  SEGMENTS IN THE MODULE
+  ======================
+RCODE
+  Relative segment, address: CODE 00000204 - 00000212 (0xf bytes), align: 0
+  Segment part 0.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           ?L_MOV_X                00000204        zb_sniffer_timer_interrupt_handler (zb_sniffer_time)
+
+    -------------------------------------------------------------------------
+  LIBRARY MODULE, NAME : ?L_MOV_TO_X
+
+  SEGMENTS IN THE MODULE
+  ======================
+RCODE
+  Relative segment, address: CODE 00000213 - 00000221 (0xf bytes), align: 0
+  Segment part 2.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           ?L_MOV_TO_X             00000213        usbUartInit (usb_uart)
+
+    -------------------------------------------------------------------------
+  LIBRARY MODULE, NAME : ?XLOAD_R2345
+
+  SEGMENTS IN THE MODULE
+  ======================
+RCODE
+  Relative segment, address: CODE 00000222 - 0000022D (0xc bytes), align: 0
+  Segment part 0.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           ?XLOAD_R2345            00000222        zb_sniffer_usb_init (zb_sniffer_usb)
+
+    -------------------------------------------------------------------------
+  LIBRARY MODULE, NAME : ?MOVE_LONG8_XDATA_IDATA
+
+  SEGMENTS IN THE MODULE
+  ======================
+RCODE
+  Relative segment, address: CODE 0000022E - 0000023A (0xd bytes), align: 0
+  Segment part 0.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           ?MOVE_LONG8_XDATA_IDATA
+                                   0000022E        ?PUSH_XSTACK_I (?PUSH_XSTACK_I)
+
+    -------------------------------------------------------------------------
+  LIBRARY MODULE, NAME : ?MOVE_LONG8_XDATA_XDATA_2DPTR
+
+  SEGMENTS IN THE MODULE
+  ======================
+RCODE
+  Relative segment, address: CODE 0000023B - 0000024B (0x11 bytes), align: 0
+  Segment part 0.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           ?MOVE_LONG8_XDATA_XDATA_2DPTR
+                                   0000023B        ?PUSH_XSTACK8_X_2DPTR (?PUSH_XSTACK8_X_2DPTR)
+
+    -------------------------------------------------------------------------
+  LIBRARY MODULE, NAME : ?S_DIV_MOD
+
+  SEGMENTS IN THE MODULE
+  ======================
+RCODE
+  Relative segment, address: CODE 0000024C - 000002A4 (0x59 bytes), align: 0
+  Segment part 1.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           ?US_DIV_MOD             0000024C        populate_transport_rb_from_buffer (usb_uart)
+                                                   zb_rf_start_tx (zb_sniffer_radio)
+                                                   zb_sniffer_get_next_block_for_host (zb_sniffer_transport)
+                                                   zb_sniffer_rf_interrupt_handler (zb_sniffer_radio)
+
+    -------------------------------------------------------------------------
+  LIBRARY MODULE, NAME : ?US_SHR
+
+  SEGMENTS IN THE MODULE
+  ======================
+RCODE
+  Relative segment, address: CODE 000002A5 - 000002A7 (0x3 bytes), align: 0
+  Segment part 1.             Intra module refs:   Segment part 2
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           ?US_SHR                 000002A5        ConfigureEndpoints (usb_standard_requests)
+                                                   usbirqHandler (usb_interrupt)
+                                                   usbirqInit (usb_interrupt)
+                                                   usbsrGetDescriptor (usb_standard_requests)
+    -------------------------------------------------------------------------
+RCODE
+  Relative segment, address: CODE 000002A8 - 000002B3 (0xc bytes), align: 0
+  Segment part 2.             Intra module refs:   ?US_SHR
+
+    -------------------------------------------------------------------------
+  LIBRARY MODULE, NAME : ?S_SHL
+
+  SEGMENTS IN THE MODULE
+  ======================
+RCODE
+  Relative segment, address: CODE 000002B4 - 000002B6 (0x3 bytes), align: 0
+  Segment part 0.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           ?S_SHL                  000002B4        ConfigureEndpoints (usb_standard_requests)
+                                                   usbirqHandler (usb_interrupt)
+    -------------------------------------------------------------------------
+RCODE
+  Relative segment, address: CODE 000002B7 - 000002B9 (0x3 bytes), align: 0
+  Segment part 1.             Intra module refs:   Segment part 2
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           ?S_SHL_REW              000002B7 
+    -------------------------------------------------------------------------
+RCODE
+  Relative segment, address: CODE 000002BA - 000002C6 (0xd bytes), align: 0
+  Segment part 2.             Intra module refs:   ?S_SHL
+                                                   ?S_SHL_REW
+
+    -------------------------------------------------------------------------
+  LIBRARY MODULE, NAME : ?ALLOC_XSTACK8
+
+  SEGMENTS IN THE MODULE
+  ======================
+RCODE
+  Relative segment, address: CODE 000002C7 - 000002DC (0x16 bytes), align: 0
+  Segment part 0.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           ?ALLOC_XSTACK8          000002C7        usbOutProcess (usb_uart)
+
+    -------------------------------------------------------------------------
+  LIBRARY MODULE, NAME : ?DEALLOC_XSTACK8
+
+  SEGMENTS IN THE MODULE
+  ======================
+RCODE
+  Relative segment, address: CODE 000002DD - 000002F7 (0x1b bytes), align: 0
+  Segment part 0.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           ?DEALLOC_XSTACK8        000002DD        ConfigureEndpoints (usb_standard_requests)
+                                                   memcpy (?memcpy)
+                                                   populate_transport_rb_from_buffer (usb_uart)
+                                                   usbInProcess (usb_uart)
+                                                   usbOutProcess (usb_uart)
+                                                   usbdpFindNext (usb_descriptor_parser)
+                                                   usbfwReadFifo (usb_framework)
+                                                   usbfwSetupHandler (usb_framework)
+                                                   usbfwWriteFifo (usb_framework)
+                                                   usbsrGetDescriptor (usb_standard_requests)
+                                                   usbsrSetConfiguration (usb_standard_requests)
+                                                   usbsrSetInterface (usb_standard_requests)
+                                                   usbsuspEnter (usb_suspend)
+                                                   zb_rf_start_tx (zb_sniffer_radio)
+                                                   zb_sniffer_get_next_block_for_host (zb_sniffer_transport)
+                                                   zb_sniffer_rf_interrupt_handler (zb_sniffer_radio)
+
+    -------------------------------------------------------------------------
+  LIBRARY MODULE, NAME : ?ADD_XSTACK_DISP8
+
+  SEGMENTS IN THE MODULE
+  ======================
+RCODE
+  Relative segment, address: CODE 000002F8 - 00000312 (0x1b bytes), align: 0
+  Segment part 1.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           ?ADD_XSTACK_DISP0_8     000002F8        ?PUSH_XSTACK8_X_2DPTR (?PUSH_XSTACK8_X_2DPTR)
+                                                   ?PUSH_XSTACK_I (?PUSH_XSTACK_I)
+                                                   ConfigureEndpoints (usb_standard_requests)
+                                                   memcpy (?memcpy)
+                                                   populate_transport_rb_from_buffer (usb_uart)
+                                                   usbInProcess (usb_uart)
+                                                   usbdpFindNext (usb_descriptor_parser)
+                                                   usbfwReadFifo (usb_framework)
+                                                   usbfwSetupHandler (usb_framework)
+                                                   usbfwWriteFifo (usb_framework)
+                                                   usbsrGetDescriptor (usb_standard_requests)
+                                                   usbsrSetConfiguration (usb_standard_requests)
+                                                   usbsrSetInterface (usb_standard_requests)
+                                                   usbsuspEnter (usb_suspend)
+                                                   zb_rf_start_tx (zb_sniffer_radio)
+                                                   zb_sniffer_get_next_block_for_host (zb_sniffer_transport)
+                                                   zb_sniffer_rf_interrupt_handler (zb_sniffer_radio)
+
+    -------------------------------------------------------------------------
+  LIBRARY MODULE, NAME : ?XSTACK_DISP8
+
+  SEGMENTS IN THE MODULE
+  ======================
+RCODE
+  Relative segment, address: CODE 00000313 - 00000326 (0x14 bytes), align: 0
+  Segment part 1.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           ?XSTACK_DISP0_8         00000313        usbOutProcess (usb_uart)
+                                                   usbfwReadFifo (usb_framework)
+                                                   usbfwWriteFifo (usb_framework)
+           ?XSTACK_DISP1_8         0000031D        memcpy (?memcpy)
+
+    -------------------------------------------------------------------------
+  LIBRARY MODULE, NAME : ?CALL_IND
+
+  SEGMENTS IN THE MODULE
+  ======================
+RCODE
+  Relative segment, address: CODE 00000327 - 00000328 (0x2 bytes), align: 0
+  Segment part 0.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           ?CALL_IND               00000327        usbfwSetupHandler (usb_framework)
+                                                   usbsuspEnter (usb_suspend)
+
+    -------------------------------------------------------------------------
+  LIBRARY MODULE, NAME : ?FUNC_ENTER_XDATA
+
+  SEGMENTS IN THE MODULE
+  ======================
+RCODE
+  Relative segment, address: CODE 00000329 - 00000391 (0x69 bytes), align: 0
+  Segment part 1.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           ?FUNC_ENTER_XDATA       00000329        ChangeFeature (usb_standard_requests)
+                                                   ConfigureEndpoints (usb_standard_requests)
+                                                   memcpy (?memcpy)
+                                                   populate_transport_rb_from_buffer (usb_uart)
+                                                   usbInProcess (usb_uart)
+                                                   usbOutProcess (usb_uart)
+                                                   usbUartInit (usb_uart)
+                                                   usbdpFindNext (usb_descriptor_parser)
+                                                   usbdpGetConfigurationDesc (usb_descriptor_parser)
+                                                   usbdpGetInterfaceDesc (usb_descriptor_parser)
+                                                   usbdpGetStringDesc (usb_descriptor_parser)
+                                                   usbfwInit (usb_framework)
+                                                   usbfwReadFifo (usb_framework)
+                                                   usbfwSetupHandler (usb_framework)
+                                                   usbfwWriteFifo (usb_framework)
+                                                   usbirqInit (usb_interrupt)
+                                                   usbsrGetDescriptor (usb_standard_requests)
+                                                   usbsrGetInterface (usb_standard_requests)
+                                                   usbsrSetConfiguration (usb_standard_requests)
+                                                   usbsrSetInterface (usb_standard_requests)
+                                                   usbsuspEnter (usb_suspend)
+                                                   zb_rf_start_tx (zb_sniffer_radio)
+                                                   zb_sniffer_get_next_block_for_host (zb_sniffer_transport)
+
+    -------------------------------------------------------------------------
+  LIBRARY MODULE, NAME : ?FUNC_LEAVE_XDATA
+
+  SEGMENTS IN THE MODULE
+  ======================
+RCODE
+  Relative segment, address: CODE 00000392 - 000003D7 (0x46 bytes), align: 0
+  Segment part 1.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           ?FUNC_LEAVE_XDATA       00000392        ChangeFeature (usb_standard_requests)
+                                                   ConfigureEndpoints (usb_standard_requests)
+                                                   memcpy (?memcpy)
+                                                   populate_transport_rb_from_buffer (usb_uart)
+                                                   usbInProcess (usb_uart)
+                                                   usbOutProcess (usb_uart)
+                                                   usbUartInit (usb_uart)
+                                                   usbdpFindNext (usb_descriptor_parser)
+                                                   usbdpGetConfigurationDesc (usb_descriptor_parser)
+                                                   usbdpGetInterfaceDesc (usb_descriptor_parser)
+                                                   usbdpGetStringDesc (usb_descriptor_parser)
+                                                   usbfwInit (usb_framework)
+                                                   usbfwReadFifo (usb_framework)
+                                                   usbfwSetupHandler (usb_framework)
+                                                   usbfwWriteFifo (usb_framework)
+                                                   usbirqInit (usb_interrupt)
+                                                   usbsrGetDescriptor (usb_standard_requests)
+                                                   usbsrGetInterface (usb_standard_requests)
+                                                   usbsrSetConfiguration (usb_standard_requests)
+                                                   usbsrSetInterface (usb_standard_requests)
+                                                   usbsuspEnter (usb_suspend)
+                                                   zb_rf_start_tx (zb_sniffer_radio)
+                                                   zb_sniffer_get_next_block_for_host (zb_sniffer_transport)
+
+    -------------------------------------------------------------------------
+  LIBRARY MODULE, NAME : ?INTERRUPT_ENTER_XSP
+
+  SEGMENTS IN THE MODULE
+  ======================
+RCODE
+  Relative segment, address: CODE 000003D8 - 0000043E (0x67 bytes), align: 0
+  Segment part 1.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           ?INTERRUPT_ENTER_XSP    000003D8        usbirqHandler (usb_interrupt)
+                                                   zb_sniffer_rf_interrupt_handler (zb_sniffer_radio)
+                                                   zb_sniffer_timer_interrupt_handler (zb_sniffer_time)
+
+    -------------------------------------------------------------------------
+  LIBRARY MODULE, NAME : ?INTERRUPT_LEAVE_XSP
+
+  SEGMENTS IN THE MODULE
+  ======================
+RCODE
+  Relative segment, address: CODE 0000043F - 000004A1 (0x63 bytes), align: 0
+  Segment part 1.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           ?INTERRUPT_LEAVE_XSP    0000043F        usbirqHandler (usb_interrupt)
+                                                   zb_sniffer_rf_interrupt_handler (zb_sniffer_radio)
+                                                   zb_sniffer_timer_interrupt_handler (zb_sniffer_time)
+
+    -------------------------------------------------------------------------
+  LIBRARY MODULE, NAME : ?XSTACK_SAVE_DPTR
+
+  SEGMENTS IN THE MODULE
+  ======================
+RCODE
+  Relative segment, address: CODE 000004A2 - 000004A9 (0x8 bytes), align: 0
+  Segment part 0.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           ?XSTACK_SAVE_DPTRS_1    000004A2        ConfigureEndpoints (usb_standard_requests)
+                                                   memcpy (?memcpy)
+                                                   populate_transport_rb_from_buffer (usb_uart)
+                                                   usbInProcess (usb_uart)
+                                                   usbdpFindNext (usb_descriptor_parser)
+                                                   usbfwReadFifo (usb_framework)
+                                                   usbfwSetupHandler (usb_framework)
+                                                   usbfwWriteFifo (usb_framework)
+                                                   usbsrGetDescriptor (usb_standard_requests)
+                                                   usbsrSetConfiguration (usb_standard_requests)
+                                                   usbsrSetInterface (usb_standard_requests)
+                                                   usbsuspEnter (usb_suspend)
+                                                   zb_rf_start_tx (zb_sniffer_radio)
+                                                   zb_sniffer_get_next_block_for_host (zb_sniffer_transport)
+                                                   zb_sniffer_rf_interrupt_handler (zb_sniffer_radio)
+
+    -------------------------------------------------------------------------
+  LIBRARY MODULE, NAME : ?XSTACK_RESTORE_DPTR
+
+  SEGMENTS IN THE MODULE
+  ======================
+RCODE
+  Relative segment, address: CODE 000004AA - 000004B1 (0x8 bytes), align: 0
+  Segment part 0.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           ?XSTACK_RESTORE_DPTRS_1
+                                   000004AA        ConfigureEndpoints (usb_standard_requests)
+                                                   memcpy (?memcpy)
+                                                   populate_transport_rb_from_buffer (usb_uart)
+                                                   usbInProcess (usb_uart)
+                                                   usbdpFindNext (usb_descriptor_parser)
+                                                   usbfwReadFifo (usb_framework)
+                                                   usbfwSetupHandler (usb_framework)
+                                                   usbfwWriteFifo (usb_framework)
+                                                   usbsrGetDescriptor (usb_standard_requests)
+                                                   usbsrSetConfiguration (usb_standard_requests)
+                                                   usbsrSetInterface (usb_standard_requests)
+                                                   usbsuspEnter (usb_suspend)
+                                                   zb_rf_start_tx (zb_sniffer_radio)
+                                                   zb_sniffer_get_next_block_for_host (zb_sniffer_transport)
+                                                   zb_sniffer_rf_interrupt_handler (zb_sniffer_radio)
+
+    -------------------------------------------------------------------------
+  LIBRARY MODULE, NAME : ?PUSH_XSTACK_I
+
+  SEGMENTS IN THE MODULE
+  ======================
+RCODE
+  Relative segment, address: CODE 000004B2 - 000004B5 (0x4 bytes), align: 0
+  Segment part 1.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           ?PUSH_XSTACK_I_THREE    000004B2        usbInProcess (usb_uart)
+                                                   usbOutProcess (usb_uart)
+                                                   usbfwSetupHandler (usb_framework)
+    -------------------------------------------------------------------------
+RCODE
+  Relative segment, address: CODE 000004B6 - 000004B9 (0x4 bytes), align: 0
+  Segment part 2.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           ?PUSH_XSTACK_I_TWO      000004B6        usbOutProcess (usb_uart)
+    -------------------------------------------------------------------------
+RCODE
+  Relative segment, address: CODE 000004BA - 000004C6 (0xd bytes), align: 0
+  Segment part 4.             Intra module refs:   ?PUSH_XSTACK_I_THREE
+                                                   ?PUSH_XSTACK_I_TWO
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           ?PUSH_XSTACK_I          000004BA 
+
+    -------------------------------------------------------------------------
+  LIBRARY MODULE, NAME : ?PUSH_XSTACK8_X_2DPTR
+
+  SEGMENTS IN THE MODULE
+  ======================
+RCODE
+  Relative segment, address: CODE 000004C7 - 000004CA (0x4 bytes), align: 0
+  Segment part 2.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           ?PUSH_XSTACK8_X_THREE_2DPTR
+                                   000004C7        usbfwSetupHandler (usb_framework)
+    -------------------------------------------------------------------------
+RCODE
+  Relative segment, address: CODE 000004CB - 000004D7 (0xd bytes), align: 0
+  Segment part 5.             Intra module refs:   ?PUSH_XSTACK8_X_THREE_2DPTR
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           ?PUSH_XSTACK8_X_2DPTR   000004CB 
+
+    -------------------------------------------------------------------------
+  LIBRARY MODULE, NAME : ?memcpy
+
+  SEGMENTS IN THE MODULE
+  ======================
+NEAR_CODE
+  Relative segment, address: CODE 0000230A - 00002365 (0x5c bytes), align: 0
+  Segment part 6.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           memcpy                  0000230A        usbOutProcess (usb_uart)
+               XSTACK = 00000002 ( 0000000A )
+               ISTACK = 00000000 ( 00000001 )
+
+
+
+
+                ****************************************
+                *                                      *
+                *      SEGMENTS IN ADDRESS ORDER       *
+                *                                      *
+                ****************************************
+
+
+SEGMENT              SPACE    START ADDRESS   END ADDRESS     SIZE  TYPE  ALIGN
+=======              =====    =============   ===========     ====  ====  =====
+INTVEC               CODE          00000000 - 00000085          86   com    0
+CSTART               CODE          00000086 - 000000E6          61   rel    0
+DATA_ID              CODE               000000E7                     dse    0
+BDATA_ID             CODE               000000E7                     dse    0
+BIT_ID               CODE               000000E7                     dse    0
+IXDATA_ID            CODE               000000E7                     dse    0
+PDATA_ID             CODE               000000E7                     dse    0
+IDATA_ID             CODE               000000E7                     dse    0
+XDATA_ID             CODE          000000E7 - 000000FC          16   rel    0
+RCODE                CODE          000000FD - 000004D7         3DB   rel    0
+DIFUNCT              CODE               000004D8                     dse    0
+CODE_C               CODE               000004D8                     dse    0
+CODE_N               CODE               000004D8                     dse    0
+NEAR_CODE            CODE          000004D8 - 00002365        1E8E   rel    2
+REGISTERS            DATA          00000000 - 00000007           8   rel    0
+VREG                 DATA          00000008 - 0000000D           6   rel    0
+PSP                  DATA               0000000E                     dse    0
+XSP                  DATA          0000000E - 0000000F           2   rel    0
+DATA_I               DATA               00000010                     dse    0
+DATA_Z               DATA          00000010 - 00000016           7   rel    0
+BREG                 BIT        00000020.0  -  00000020.7        8   rel    0
+SFR_AN               DATA          00000080 - 00000080           1   rel    0
+                     DATA          00000088 - 00000088           1 
+                     DATA          0000008B - 0000008B           1 
+                     DATA          00000090 - 00000091           2 
+                     DATA          0000009A - 0000009B           2 
+                     DATA          0000009D - 0000009E           2 
+                     DATA          000000A8 - 000000A8           1 
+                     DATA          000000AC - 000000AC           1 
+                     DATA          000000AF - 000000AF           1 
+                     DATA          000000B8 - 000000B8           1 
+                     DATA          000000BE - 000000BF           2 
+                     DATA          000000C6 - 000000C6           1 
+                     DATA          000000D9 - 000000DB           3 
+                     DATA          000000E1 - 000000E1           1 
+                     DATA          000000E4 - 000000E5           2 
+                     DATA          000000E8 - 000000E9           2 
+                     DATA          000000F3 - 000000F4           2 
+                     DATA          000000FD - 000000FE           2 
+XSTACK               XDATA         00000001 - 00000EFF         EFF   rel    0
+XDATA_Z              XDATA         00000F00 - 00001BEF         CF0   rel    0
+XDATA_I              XDATA         00001BF0 - 00001C05          16   rel    0
+ISTACK               IDATA         000000C0 - 000000FF          40   rel    0
+
+                ****************************************
+                *                                      *
+                *        END OF CROSS REFERENCE        *
+                *                                      *
+                ****************************************
+
+ 9 062 bytes of CODE  memory
+    23 bytes of DATA  memory (+ 28 absolute )
+ 7 173 bytes of XDATA memory
+    64 bytes of IDATA memory
+     8 bits  of BIT   memory
+
+Errors: none
+Warnings: none
+
