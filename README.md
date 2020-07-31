@@ -1,5 +1,5 @@
 # ZBOSS_extended
-ZBOSS packet sniffer extended with injection features for CC2531 hardware by Texas Instruments.
+ZBOSS packet sniffer extended with injection features for the CC2531 hardware by Texas Instruments.
 
 ## Description
 
