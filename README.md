@@ -10,7 +10,7 @@ The solution is not ready out of the box yet because it needs the KillerBee driv
 ## How to use it
 The file *zboss_extended_firmware.hex* is the hex of the firmware. It can be flashed to the CC2531 using the CC debugger by Texas Instruments or using a Raspberry Pi. Further instruction on the flashing process and alternative methods can be found in the Zigbee2Mqtt website,https://www.zigbee2mqtt.io/.
 
-The source code of the firmware is available in the *hw* folder.  
+The source code of the firmware is available in the *hw* folder.   
 Once the project is loaded in IAR, it has to be configured to run on CC2531. Go to Project->Edit Configurations->CC2531.
 
 ## TODO:
