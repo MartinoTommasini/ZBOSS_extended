@@ -13,6 +13,8 @@ The file *zboss_extended_firmware.hex* is the hex of the firmware. It can be fla
 The source code of the firmware is available in the *hw* folder.   
 Once the project is loaded in IAR, it has to be configured to run on CC2531. Go to Project->Edit Configurations->CC2531.
 
+Datasheet CC2531: 
+
 ## TODO:
 - Add support for 64 byte packets arriving from the host to the CC2531 endpoints.
 - Remove reduntant passage of Len field to the host.
