@@ -18,7 +18,7 @@ Once the project is loaded in IAR, it has to be configured to run on CC2531. Go 
 ## TODO:
 - Add support for 64 byte packets arriving from the host to the CC2531 endpoints.
 
-## CONTACTS:
+## Contacts:
 Do not hexitate to contact me at martino.tommasini@gmail.com.
 
     
