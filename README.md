@@ -3,7 +3,7 @@ ZBOSS packet sniffer extended with injection features for the CC2531 hardware by
 
 ## Description
 
-*ZBOSS packet sniffer* is solution developed by ZBOSS, https://zboss.dsr-wireless.com/, that allows the usage of the CC2531 as a packet sniffer but it doesn't provide any functionalities regarding the trasmission of packets. *ZBOSS_extended* extends the *ZBOSS packet sniffer firmware* implementing injection capabilities in the firmware and modifying it to support KillerBee framework. 
+*ZBOSS packet sniffer* is a solution developed by ZBOSS, https://zboss.dsr-wireless.com/, that allows the usage of the CC2531 as a packet sniffer but it doesn't provide any functionalities regarding the trasmission of packets. *ZBOSS_extended* extends the *ZBOSS packet sniffer firmware* implementing injection capabilities in the firmware and modifying it to support KillerBee framework. 
 
 The solution is not ready out of the box yet because it needs the KillerBee drivers to be implemented (A Push Request is pending).
 
