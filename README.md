@@ -15,6 +15,14 @@ Once the project is loaded in IAR, it has to be configured to run on CC2531. Go 
 
 Datasheet CC2531: https://www.ti.com/lit/ug/swru191f/swru191f.pdf?ts=1596190022846&ref_url=https%253A%252F%252Fwww.ti.com%252Fproduct%252FCC2531
 
+
+In order to add the new features, changes has been apported to the following ZBOSS original files:
+- hw/usb/class_cdc/usb_uart.c
+- hw/zb_sniffer_radio.h
+- hw/zb_sniffer.c
+- hw/zb_sniffer_radio.c
+- hw/zb_sniffer_transport.c
+
 ## TODO:
 - Add support for 64 byte packets arriving from the host to the CC2531 endpoints.
 - Remove reduntant passage of Len field to the host.
