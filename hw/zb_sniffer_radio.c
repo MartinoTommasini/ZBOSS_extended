@@ -6,6 +6,9 @@
 zb_bool_t is_sniffing;
 zb_bool_t fifo_overflow;
 
+// This file has been modified and differs from the original ZBOSS source code.
+
+
 void zb_sniffer_rf_init_radio(void)
 {
   /* Auto CRC + append RSSI & LQI */

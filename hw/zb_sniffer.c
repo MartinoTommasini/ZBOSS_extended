@@ -8,6 +8,8 @@
 #define ZB_SNIFFER_STOP_CMD  0xBB
 #define ZB_SEND_PACKET_CMD   0xCC   
 
+// This file has been modified and differs from the original ZBOSS source code.
+
 zb_sniffer_transport_rb_t transport_rb;
 zb_sniffer_cmd_rb_t cmd_rb;
 zb_bool_t packet_is_arriving = ZB_FALSE;
@@ -82,3 +84,4 @@ void main(void)
     zb_sniffer_iteration();
   }
 }
+
