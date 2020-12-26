@@ -1,9 +1,10 @@
 # ZBOSS_extended
-ZBOSS packet sniffer extended with injection features for the CC2531 hardware by Texas Instruments.
+*ZBOSS_extended* extends the *ZBOSS packet sniffer*, adding injection features for the  CC2531 hardware by Texas Instruments and providing compatibility with KillerBee framework.
 
 ## Description
 
-*ZBOSS packet sniffer* is a solution developed by ZBOSS, https://zboss.dsr-wireless.com/, that allows the usage of the CC2531 as a packet sniffer but it doesn't provide any functionalities regarding the trasmission of packets. *ZBOSS_extended* extends the *ZBOSS packet sniffer firmware* implementing injection capabilities in the firmware and modifying it to support KillerBee framework. 
+*ZBOSS packet sniffer* is a solution developed by ZBOSS, https://zboss.dsr-wireless.com/, that allows the usage of the CC2531 as a packet sniffer. However it doesn't provide any functionalities regarding the trasmission of packets.  
+*ZBOSS_extended* extends the *ZBOSS packet sniffer firmware* implementing injection capabilities in the firmware and modifying it in order to provide support to KillerBee framework. 
 
 The solution is not ready out of the box yet because it needs the KillerBee drivers to be implemented (A Push Request is pending).
 
@@ -16,12 +17,13 @@ Once the project is loaded in IAR, it has to be configured to run on CC2531. Go 
 Datasheet CC2531: https://www.ti.com/lit/ug/swru191f/swru191f.pdf?ts=1596190022846&ref_url=https%253A%252F%252Fwww.ti.com%252Fproduct%252FCC2531
 
 
-In order to add the new features, changes has been apported to the following ZBOSS original files:
+In order to add the new features mentioned above, changes has been apported to the following original ZBOSS files:
 - hw/usb/class_cdc/usb_uart.c
 - hw/zb_sniffer_radio.h
 - hw/zb_sniffer.c
 - hw/zb_sniffer_radio.c
 - hw/zb_sniffer_transport.c
+
 
 ## TODO:
 - Add support for 64 byte packets arriving from the host to the CC2531 endpoints.
