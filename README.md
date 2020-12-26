@@ -6,8 +6,6 @@
 *ZBOSS packet sniffer* is a solution developed by ZBOSS, https://zboss.dsr-wireless.com/, that allows the usage of the CC2531 as a packet sniffer. However it doesn't provide any functionalities regarding the trasmission of packets.  
 *ZBOSS_extended* extends the *ZBOSS packet sniffer firmware* implementing injection capabilities in the firmware and modifying it in order to provide support to KillerBee framework. 
 
-The solution is not ready out of the box yet because it needs the KillerBee drivers to be implemented (A Push Request is pending).
-
 ## How to use it
 The file *zboss_firmware.hex* is the hex of the firmware. It can be flashed to the CC2531 using the CC debugger by Texas Instruments or using a Raspberry Pi. Further instruction on the flashing process and alternative methods can be found in the Zigbee2Mqtt website, https://www.zigbee2mqtt.io/.
 
