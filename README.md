@@ -29,7 +29,4 @@ In order to add the new features mentioned above, changes has been apported to t
 - Add support for 64 byte packets arriving from the host to the CC2531 endpoints.
 - Remove reduntant passage of Len field to the host.
 
-## Contacts:
-Do not hexitate to contact me at martino.tommasini@gmail.com.
-
     
