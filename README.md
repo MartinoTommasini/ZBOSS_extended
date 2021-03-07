@@ -27,6 +27,7 @@ The killerbee driver for this firmware is not merged in the official killerbee r
 The driver and the minor additions needed to allow compatibility between Killerbee and ZBOSS_extended are already implemented in https://github.com/MartinoTommasini/killerbee.  
 Driver file:
 - killerbee/dev_cc2531_zboss.py.  
+
 Small additions to:  
 - killerbee/__init__.py
 - killerbee/kbutils.py
