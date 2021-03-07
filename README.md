@@ -22,6 +22,15 @@ In order to add the new features mentioned above, changes has been apported to t
 - hw/zb_sniffer_radio.c
 - hw/zb_sniffer_transport.c
 
+## Note
+The killerbee driver for this firmware is not merged in the official killerbee repository yet. Therefore, this firmware does not work out-of-the-box with https://github.com/riverloopsec/killerbee .  
+The driver and the minor additions needed to allow compatibility between Killerbee and ZBOSS_extended are already implemented in https://github.com/MartinoTommasini/killerbee.  
+Driver file:
+- killerbee/dev_cc2531_zboss.py.  
+Small additions to:  
+- killerbee/__init__.py
+- killerbee/kbutils.py
+
 
 ## TODO:
 - Add support for 64 byte packets arriving from the host to the CC2531 endpoints.
